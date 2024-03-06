@@ -1,5 +1,10 @@
 # DocumentTest.testNormalizeDocument
 
+## Potential solutions
+
+- [Lack of a context attribute on
+  ownerDocuments](../solutions/ownerDocument.context.md)
+
 ## Test failure
 
 ```
