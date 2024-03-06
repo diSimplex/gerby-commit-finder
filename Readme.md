@@ -57,9 +57,10 @@ In order to answer these questions, we have:
    `commitHistory` directory).
 
 2. Grabbed the difference file for each commit which are unique to
-   the Gerby-PlasTeX fork. These difference files are organized by both
-   the PlasTeX files they change (see the `filesChanged` directory), as
-   well as by the commit (see the `commits` directory).
+   the Gerby-PlasTeX fork, using the `tools/grabCommit` tool. These
+   difference files are organized by both the PlasTeX files they change
+   (see the `filesChanged` directory), as well as by the commit (see the
+   `commits` directory).
 
    In all cases, in this analysis, any given "commit" is identified by
    `YYYY_MM_DD-HH_MM_SS-comitID`.
@@ -72,15 +73,16 @@ In order to answer these questions, we have:
 
    Many of these applications resulted in `patch` "failures". For each
    such "failure" the differences were applied by hand to the appropriate
-   PlasTeX file, and a "hand patch" was created (see the `handPatches`
-   directory).
+   PlasTeX file, and a "hand patch" was created using the
+   `tools/createHandPatch` tool (see the `handPatches` directory).
 
    Some differences were determined to be un-needed and so "ignored". (Any
    entry in the `patchUps.yaml` file which does not include *either*
    `patch:` or `patchOK:` are *ignored*).
 
    The full analysis of what was done at this stage can be found in the
-   `details:` entry of the `patchUps.yaml`.
+   `details:` entry for each changed file as recorded in the
+   `patchUps.yaml` file.
 
 4. Using the decisions recorded in the `patchUps.yaml` file, we then used
    the `tools/testApplyDiffs` again to create a version of the PlasTeX

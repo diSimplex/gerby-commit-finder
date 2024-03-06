@@ -5,8 +5,8 @@ import subprocess
 import sys
 import yaml
 
-origPlastexDir = '../external/plastex'
-testPlastexDir  = '~/tmp/gerby-plastex'
+origPlastexDir   = '../external/plastex'
+testPlastexDir   = '~/tmp/gerby-plastex'
 testPlastexDirA  = '~/tmp/gerby-plastex/a'
 testPlastexDirB  = '~/tmp/gerby-plastex/b'
 filesDir = 'filesChanged'
@@ -35,6 +35,9 @@ except Exception as err :
 #print(yaml.dump(patchUps))
 #sys.exit(0)
 
+testPlastexDir  = os.path.expanduser(testPlastexDir)
+testPlastexDirA = os.path.expanduser(testPlastexDirA)
+testPlastexDirB = os.path.expanduser(testPlastexDirB)
 os.system(f"rm -rf {testPlastexDir}")
 os.system(f"mkdir -p {testPlastexDirA}")
 os.system(f"mkdir -p {testPlastexDirB}")
