@@ -2,7 +2,7 @@
 
 ## Effected tests
 
-- attempt-1-20240306 :
+- attempt-1-20240306 (2/28 failures) :
   - [ContextGenerated.testNewcommand](../attempt-1-20240306/ContextGenerated.testNewcommand.md)
   - [DocumentTest.testNormalizeDocument](../attempt-1-20240306/DocumentTest.testNormalizeDocument.md)
 
