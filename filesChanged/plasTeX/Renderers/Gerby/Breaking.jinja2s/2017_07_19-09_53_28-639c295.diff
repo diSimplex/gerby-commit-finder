@@ -1,0 +1,8 @@
+diff --git a/plasTeX/Renderers/Gerby/Breaking.jinja2s b/plasTeX/Renderers/Gerby/Breaking.jinja2s
+new file mode 100644
+index 0000000..6c3a361
+--- /dev/null
++++ b/plasTeX/Renderers/Gerby/Breaking.jinja2s
+@@ -0,0 +1,2 @@
++name: linebreak \ newline pagebreak newpage clearpage cleardoublepage
++<br />

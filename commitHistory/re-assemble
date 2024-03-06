@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# This bash script re-assembles the gerby and plastex commits (excluding
+# the common-base.commits)
+
+# The following SHOULD be the same as
+#   gerby-plastex-gerby-group-all.commits
+cat \
+  gerby-plastex-gerby-group-3.commits \
+  common-group-2.commits \
+  gerby-plastex-gerby-group-2.commits \
+  common-group-1.commits \
+  gerby-plastex-gerby-group-1.commits \
+  > /tmp/gerby-plastex-gerby-group-all.commits
+
+# The following SHOULD be the same as
+#   plastex-plastex-master-group-all.commits
+cat \
+  plastex-plastex-master-group-1.commits \
+  common-group-2.commits \
+  common-group-1.commits \
+  > /tmp/plastex-plastex-master-group-all.commits

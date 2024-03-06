@@ -1,0 +1,12 @@
+diff --git a/plasTeX/Renderers/Gerby/Bibliography.jinja2s b/plasTeX/Renderers/Gerby/Bibliography.jinja2s
+index e39fcea..79504dc 100644
+--- a/plasTeX/Renderers/Gerby/Bibliography.jinja2s
++++ b/plasTeX/Renderers/Gerby/Bibliography.jinja2s
+@@ -1,6 +1,2 @@
+ name: cite
+-<span class="cite">
+-[{% for item in obj.attributes['bibkeys'] %}<a href="/bibliography/{{ item }}">{{ item }}</a>{% endfor %}]
+-</span>
+-{# TODO probably needs to handle commas in an intelligent way #}
+-
++<span class="cite">[{% for item in obj.attributes['bibkeys'] %}<a href="/bibliography/{{ item }}">{{ item }}</a>{% endfor %}]</span>

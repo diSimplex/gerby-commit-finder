@@ -1,0 +1,1022 @@
+4b66cd7 add a unit test for \imath and \jmath
+049d197 imath and jmath are MathSymbols
+0d113a5 amsthm: change \newtheorem to take any TeXFragment as a header
+1937473 Bump version number to 3.1
+f1fe3e5 Improve advice in --debug
+297531f remove unused `renderMethod`
+91394b7 doc: pushToken does not pop from output
+38bf496 Fix footnote support in beamer
+1b41093 Remove coveralls from workflow
+538cb84 Drop leftover debug print
+97eb95b mypy fix.
+aa2f826 Fix many ResourceWarning from test suite (#343)
+b4f39d2 Remove useless files
+a7ed50f Remove empty file that has been around for 20 years.
+06ad1e7 Test also using python 3.12.
+4fef705 Fix parsing of smallmatrix
+78aa899 Fix image comparison process call
+38a3f86 Fix image cache
+182ee95 Remove badges in README since they don't work.
+de37518 Fix type hints
+265b6db Fix amsthm test
+ed5c89d Split-off a Context.loadPythonPackage method
+606e997 Improve templates for theorems and proofs
+0d6fa22 Give direct access to document in Jinja templates
+7b8ddfc Better amsthm fix
+dadcfc3 Temporary revert broken fix
+51c8375 Fix thmenv level to avoid having a theorem nested in a paragraph.
+f4b91c1 Fix xml debug rendering
+8714347 HTML5: renderer: Changes 'equation' content to mathjax_source
+be2ea24 Missing double escape
+298a55b Mark Beamer test as expected to fail.
+d81a9fd Document url argument type.
+8ee67cb Don't normalize url attribute
+84b9294 Allow nodes to define non-normalizable attributes.
+91e5b36 Allow arg types to specify character subsitutions
+dd1a125 Add unit test for issue #342.
+48c0fc8 Fix Imager TEXINPUTS
+a882a62 Fix missing css files
+7292660 Fix beamer argument handling and simplify code
+c10c394 rm print("Yo")
+aa5de5c Update __version__
+514aeda Remove mention of version 3.
+83c9308 Bump version number
+f5ac2c9 Migrate to pyproject.toml + setup.cfg
+9edae66 Update INSTALL file
+506dd29 Simplify README even more
+3ef3433 Switch to entry_points mechanism
+fdadd40 Add plugin documentation
+8c953ac Fix page numbering in imager
+ac03699 Pass TEXINPUTS to imagers
+31d93dc Fix listings argument parsing
+df336f1 Rough implementation of the forest package
+ead1d17 Doc fixes about logging.
+986c71a Allow plugins without a Packages folder
+68bb1eb Better missing file handling in HTML5
+3b74bdc Add getting started guide.
+e75872a Fix pdftoppm verify method
+f2f2f62 Fix Imager choice logic
+89508df Fix \input without extension and without kpsewhich
+f9fd895 Document ensuremath hack
+72146b5 Filter str on logging
+ffa1ec3 Better fix for \big< and its evil friends
+5043eb8 Fix typo in debug help
+6eb8db4 Fix the argv fix
+a62ad4f Correctly pass argv in plasTeX.plastex
+f31ba76 renderers.tex: fix typos
+f3098f4 Fix a few typos.
+5c180be Multi-version fix
+22d5809 Change deprecated pillow name
+79acacd markdown "fix"
+0147af7 Add history to CONTRIBUTING.md
+01a29b2 Add Python 3.10 and 3.11 to GitHub tests
+a8e9969 Minor stylistic changes in README.md.
+82928de documentation: Fix typo in Doc/document.tex
+3de024a More helpful error messages from xcolor
+855c2cd Fix subsitution logic
+4b3290b Add test for error reporting issue #274
+26fd50d bug fix for #274 line numbering inconsistency
+b7dc1b9 Try to fix coverall CI
+039e617 CI also in python 3.10.
+feae5da Remove outdated part of README
+0312076 Tell mypy to ignore code it doesn't understand
+d5144e1 Allow Jinja2>=3.1.0
+806d80c Trivial typo: s/Jain/Join/
+5b89290 Fix documentation typo
+b3bcf6d Fix mathjax issue with \left< and \right>
+b89831f Fix unicode symbols for medium/thick spaces
+a04394f remove extra argument self
+7521d2a minipage has three optional arguments
+8dffc02 Fix some displaymath-style environment.
+3d7d7cb Avoid repeately adding to sys.path
+f4152e7 Allow packages to add items at the end of the toc.
+af16287 mypy fixes
+a04339a Fix mathjax config
+b441bfe Fix AMS aligned numbering
+e562fe1 Some more debugging doc.
+206709a Custom templates loading fix
+4bce4de Improve {{ debug() }}
+567dc07 listing tweaks
+637ed3e Add --debug option for parsed document inspection
+9722285 Better handling of SVG images
+b83f9c1 Doc: fix outdated imager examples
+04ac141 CSS: fix centering for main content and images
+bc50094 CSS: Column flex direction for \centering
+5f5fd97 Add \qed
+ff4a689 unicode-math package stub
+e0c4b55 Add mathjax-macros option
+569c456 Fix cleveref
+ec48296 Fix style
+eed8d46 Revert "Allow renewcommand to overwrite builtin"
+416ff51 Forgotten doc fix
+e75cebb Rename file argument to TeX constructor.
+d49204a Add --extra-templates command line option
+fd5ef42 Add tests for natbib cite sorting
+4ce3bae natbib store options in ownerDocument.userdata
+ceaf2e6 Empty jobname when using TeX.input with str
+68b134f remove unnecessary call to bibitems
+f394353 fix sort in natbib
+48fb06a fix double dollar construction rendering
+c900a94 New mypy flags also in GitHub workflow
+355a35f Use new mypy flags
+94448a2 listings: simplify and lint
+53ddf77 fix listings
+1168357 Fix characters substitutions in eqnarrays
+2e9bdec Fix test after new mathjax settings
+002f331 More spaces tweaks
+a10c1ed Prevent character substitutions in math environments
+b24d383 Switch to mathjax 3 by default in HTML5
+5268d43 Add missing margin in CSS
+4b73235 Revert "Fix parsing of optional argument"
+ef41cdf Don't allow mathjax $ by default
+02610ee Add amsmath eqref
+0e14743 Allow renewcommand to overwrite builtin
+29ff124 Bump py from 1.4.34 to 1.10.0
+6182161 Debug CI
+f23c113 Adds ifdefined and ifcsname
+ce23a53 One more fix to package loading
+0baf128 Fix parsing of optional argument
+616d1ca Add package iftex
+8126b0b Fix XHTML png icons
+0982ba4 Implement xr package
+a8785d3 Fix some HTML issues with $, < and >
+9a5cfb0 Add mathtools warning
+6663816 Adds pgfplots package
+b888b53 Missing option no-load-tex-package
+5e3829e Extremely primitive imakeidx implementation
+069edcc Remove more useless imports
+7ecd2d5 Remove useless test import
+563c92b Fix If test
+e5ccca9 properly parse \newif inside \if
+cd45162 unittest testUnterminatedIf to see if plastex prints warning on unterminated '`if' currently not working , due to the way plastex manages loggin see in the patch for further info
+bed9f95 warn if an \if clause was not correctly terminated
+d9b90da Stream numbers are 4-bit, i.e. values 0 to 15 «The status of input streams (Chapter 30) can be tested with the end-of-file test \ifeof [number], which is only false if the number is in the range 0–15, and the corresponding stream is open and not fully read.» From "TeX by topic", Sec 13.5.3. So '\ifeof16' will crash pdflatex, making this test quite useless
+55ab4bb when compare_output fails, show the difference
+8464abf Don't try to use ipdb in Jinja2 debug
+62789f3 HTML5: handle empty \ref
+3c17dcb Catch Jinja2 template errors
+7851d80 Expand indexing test so that the TeX works with pdflatex
+64fd038 Fix sorting of index entries
+9cd40c4 Information when loading amsart and amsbook
+b722e5b Add amsbook dummy package
+d048c6f Add de-ngerman (current German orthography) to i18n.xml
+1376dda Document the length equal test in ifthen package
+d27b25a Remove the renderer in ifthen package unit tests
+8a1cd59 Improve ifthen package based on review suggestions
+ff2b17c Implement ifthen package
+cbb24b0 Try to fix mysterious mypy issue
+0b8cf42 Improve xcolor type annotations and unit tests
+124433f Add unit tests for xcolor package
+5ca7d20 Implement xcolor package
+99cc39e Fix package loading again
+2c3fcb1 Fix amsthm fix
+de519aa Fix amsthm counter creation
+3b8e7f2 Fix some mypy errors in tests
+ea53aa2 Add missing command in tikz-cd
+a77ec54 Fix amsthm benchmark
+217dfe0 CSS tweaks
+0860185 Print ?? when a reference is undefined.
+2cbc585 Add missing </div> in main HTML5 layout
+7f3dacf Remove id when testing html output
+7454127 Fix Proof test
+3b86442 Put equation label to the right
+5c6ab9d Improve amsthm handling
+0624200 Tiny style tweaks
+f6f2819 Package loading partial revert.
+5eda583 Remove header in document node without toc
+7d60853 Add qedhere in amsthm
+811deda Layout tweaks
+6b8dabb Tweak icon sizes
+1351072 HTML5 display proofs by default
+208f1dd Change default value for dollars option
+c3d6e07 Change default vectorImager from none to pdf2svg
+1cf1565 Allow to specify image scale for each node type.
+e0a9b68 Forgotten small edits
+4d4dd32 Make HTML5 the default renderer.
+42d5dff Minimal fix to DocBook renderer
+b3f1bb8 Make sure config is loaded in HTML5 Renderer
+33120c0 Simplify README in Doc
+c510ab0 Don't try to copy js if no theme is loaded.
+69237ae Fix js file name bug introduced in 4f1dbedab
+4b60302 Add HTML5 fragment theme, and document themes.
+4f1dbed Allow empty js folder in HTML5 theme
+ca72e3e White default theme for HTML5
+8648fa1 Change test style in CSSStyles
+3d8de4e Python style tweaks
+d6e9156 add some unit tests for inline styles
+29b627d CSSStyles doesn't include properties with empty values
+8645051 Remove traces of Travis
+764440e Use tempfile to name Imager's LaTeX source file
+05e635b Move examplePackage to safer place
+cd4fd41 Remove tests for python 3.5 and add 3.9
+6fd92af More robust package importing
+76c69be Fix \capitalnewtie
+98b2512 Remove unused #! lines and make the rest specify python3
+0b4b6a0 Migrate to GitHub Actions
+fd8d523 Don't load a random python module as package
+79b8a77 Fix bug with accents in absence of content.
+aee501a Remove python2 leftover in doc
+d85adb4 Fix index entries grouping
+bd0f441 Add indexing tests
+e1c6355 Fix nested if
+1d9d19c Don't insert \input command after parsing
+415179e Fix Cleveref when the reference is non-existent
+9369e35 Fix option storage for todonotes
+f31ee2e Packages/listings: use document.userdata
+896dcdd marginnote stub
+bd5f411 Remove legacy ZPT renderer
+ddc99a1 Adapt to new ConfigManager
+7635a34 mypy fixes
+9a25456 Fix plugin defining renderers
+e50bbc6 Order postParseCallbacks
+d6839d3 Allow css and js resources to copy file only
+438fde5 Fix renderdata overwriting bug
+f6ec807 Better error reporting when loading packages
+f7be2e5 Refactor PackageResource
+e9d12a2 Load packages from config and plugins
+e23616a Only load LaTeX implementations of packages if asked
+e0f83df Allow plugins to define renderers
+a667e79 Improve tests and documentation
+beb89c5 Replace ConfigManager
+ccf5b5f Don't read file into memory with \input
+7a85561 Update renderer docs
+a19367d Don't always generate bitmap images
+b332d44 Add compare_output cache
+bc35e45 Convert more things to compare_output
+49336ff Fix \ifnum etc. integer parsing
+e731ea5 Modify some tests to use compare_output
+06d2c67 Remove empty ProcessOptions
+a73d92a Remove non-existent \ifeven command
+edce060 Remove unused logging imports
+09c5959 Fix imager test
+59f0a1b Add forgotten tex file
+40deae0 Stop ConfigFileReading from polluting repository
+a3e259c Add .mypy_cache got gitignore
+8d3437d Fix mypy error from 8c9df7e
+8c9df7e Add partial cleveref implementation
+979c122 Add basic todonotes implementation
+af50b13 Don't use callback in filename
+e0aec5b Fix FunctionalTests source collection
+525a41e Revert "Don't overwrite Config.config"
+a67aa29 Add a config file reading test.
+7bff774 Add mypy to tests
+8b6aae5 Fix or ignore all remaining mypy errors
+a1c53dc Implement __add__ for config options
+64c1a38 Fix name collision in unittest
+38de1b6 Use more modern notation for class methods
+e2207c0 Add more typing annotations
+266f6e0 Add miscellaneous mypy fixes
+c45a3b2 mypy: Fix repeated definition errors
+bdf0c16 Add mypy.ini file
+05db265 Fix all mypy incompatible import errors
+8a42b19 Use more standard way to define properties
+88b2d0f Add some tikz commands that do nothing
+f9733e0 Add option to disable some character substitutions
+0b089e6 Allow redefining unrecognizedmacro
+d42f5f2 Copy xymatrix implementation from gerby.
+5aa8766 Tidy up comments
+3eccc6f Add helper utility to check TeX output against plasTeX
+963c380 expandafter only expands once, not recursively
+f4321c2 Set catcode of macros. Fixes #70. Fixes #11
+44f2e46 Fix \expandafter implementation
+d0f3239 Simplify expandafter definition
+27c8a8f pdf2svg: truncate height/width floats
+ca34bf1 Implemented 'gathered' environment
+a9c1467 Fix counter presentation
+066bc71 Fix all typing issues in Tokenizer
+fcbe65b Removed Token classes that can never be initialized
+8ee3761 Add \number command as well
+b02bdb3 Add \romannumeral command
+77c6983 Add more typing
+8fcbf37 Add some type annotations
+9aa0aec Chapter counter shouldn't reset with new part
+f6a332b Add test for book class toc
+2dd7edc Fix regression caused by fbb79a5. Fixes #192
+3285c0c Make Imager.staticimages a dict
+11cd9cd Let compilation fail when imager fails
+527dfa5 Upon error, let Imager raise exception
+ad4ce25 More robust imager implementation
+63d7a0d let: move relax special casing elsewhere
+9f00978 Make \let less broken
+7c177a8 Factor out image comparison in tests
+ed9671d Fix mathjax url in benchmarks
+539a81a Make proof blocktype.
+47a2e39 Add tests for making Proof blocktype
+b60162a Force theorem environments to make paragraphs.
+769faeb Add test to ensure theorem content is always in a paragraph for consistent styling
+798c60e Remove bs4 dependency
+7bbce77 Update default HTML5 MathJax url
+867b0e6 Packages/color.py: fix incorrect color conversion
+311a6c7 Add custom renderer test
+463ae60 Allow using Renderer given by a path
+14afd01 Use Imager for Tikz (#151)
+770a677 Add pytest artifacts to .gitignore
+e04843d Add missing travis build dependency
+fbb79a5 Fix `Macro.source` for non-letter commands
+faff54b Add unit test for Macro.source for accents
+5fa13f8 Restore cwd after compilation
+76e1051 Fix imager test on python 3.5
+99fc05c Don't overwrite Config.config
+dceccd8 Raise exception instead of exit when renderer not found
+20ec3dc Move compilation logic from cli to library
+3997837 Add empty microtype implementation
+5b69d3a Add mathop
+a5c9750 Add text command into FontSelections.
+5eb6c43 Allow specifying different compilers for Imager and VectorImager
+bc684b4 Move verbatim to VerbatimEnvironment in __init__.py
+66ceed4 Add dvisvgm test
+71f6299 Modernize dvisvgm
+3195dc7 Make dvisvgm respect scale-factor
+cbe8c50 HTML5: Don't crash if working-dir is unspecified
+d40b7fb Add dvipng and pdf2svg imager tests
+354dc9f Fix missing imager name in error messages.
+157d7f9 Update documentation and add some type annotations
+e8436d4 Add some imager documentation
+a8066a4 Write better code in pdf2svg
+94f7c66 Let pdf2svg Imager respect scale factor
+fa2920a Clean up temporary directories after use
+f61b929 Use verifications instead of verification for imagers
+65e0b50 Add pdf2svg imager
+b2053f9 Fix formatting in CONTRIBUTING
+3709280 Document how to run tests.
+c110b8f Remove unused import
+e90a2ad Implement texorpdfstring properly
+97474e9 Add support for textsuperscript and textsubscript
+2d86210 Add missing endif
+5af28b0 Giving up on testing non-breakable space on python3.5
+a8fa44a Try to get some tox reproducibility by setting locales
+fec5594 Use HTML5 for benchmarks
+41868b5 Unicode combining diacritics as accent fallbacks
+a345d45 Order template loading
+a56e56d Try again debugging Travis
+a972955 Try to help debugging on Travis
+6b2e603 Fix benchmarked tests (again).
+2270289 Make sure Encoding test does not mess up locales.
+3fbdeab Better handling of dependencies
+2ff6344 Merge pull request #147 from dalcde/patch-1
+2c820e3 Fix hyperref typos
+40af193 Lint main script
+2b0791b Merge pull request #135 from llimeht/tmp/test-interpreter
+b561804 Merge pull request #136 from llimeht/tmp/test-warnings
+3ee75f4 Prevent ResourceWarning from popen
+c28ee18 Prevent ResourceWarning from open files
+29ded69 Merge pull request #132 from llimeht/tmp/reproducible
+267d242 Add latex packages used by tikz tests
+bd42939 Merge pull request #133 from llimeht/tmp/no-chdir
+d23b89b Fail test if runing plastex failed
+6b7910f Allow setting the plastex command for tests
+c48c4de Use context manager for chdir in tests
+48dd5be Sort index so that output is reproducible
+e93085d Bump travis python versions
+571a64c Bump to 2.1 in code
+3d3e806 Bump to version 2.1
+d7b8582 Add Python 3.8 to tox tests.
+aebf457 Fix functionnal test running
+73e5757 Search current directory if kpsewich is not there
+ea5952e Missing raw string in a tikz test.
+c60d72a Uses subprocess.call instead of os.system
+c8494fb Tikz tests
+6b52d9d Document TikZ support
+7f9621c Add tikz support
+b0d2cd8 getImage: convert file extensions to lower case
+f09f048 Fix #93
+7cc0f77 Make @ letter while loading document class
+d17a553 Fix #34
+89d0f26 Fix #36
+acaa91f Filename templating: add $ref and $node
+f4a7c6b Fix #113
+ed29ebb Better error reporting when imager fails. See #106
+ac7790b Fix #127
+777e017 Fix issue #124
+0be4317 Add test for issue #124
+06f1e71 Remove useless import
+53cc465 Merge pull request #121 from llimeht/tmp/escapes
+c08125e Merge pull request #122 from llimeht/tmp/collections.abc-imports
+a31cfd3 Merge pull request #123 from llimeht/tmp/setup-classes
+d161587 Fix escape sequences in strings
+bbd5de8 Fix collections.abc import
+7cb5379 Add missing classes to setup.py
+ce50636 CSS fix for figures in HTML5
+03734b6 Fix new sass option name in build-css.sh
+d7c3c12 Doc building update
+13e417a Remove outdated script
+0012612 Fix version number
+8ebba0f Make master the default branch
+9513db7 Try again coveralls, sorry about the noise
+ea72fd8 Reverts failed coveralls fix. Update gitignore
+cbb959e Try fixing coveralls paths
+249fdc8 Try fixing coveralls
+366e410 Fix comparisons with None
+348191b [LINT] enable singleton-comparison
+3b05013 Remove unnecessary semicolons
+5d84c2f [LINT] enable unnecessary-semicolon
+22dd213 Don't reimport modules
+b5dca73 [LINT] enable reimported
+7dc8f53 Remove unreachable code
+7a6b340 [LINT] enable unreachable
+6ea3286 Turn string statements into comments
+ae0fefa [LINT] enable pointless-string-statement
+aaad38b Make side-effect calls into an assignment
+6ef4fb0 [LINT] enable pointless-statement
+f086516 Remove unneeded 'pass' statements
+a98fbfc [LINT] enable unnecessary-pass
+30a1ee6 Delete unused imports identified by pylint
+2f882b8 [LINT] enable unused-import
+e0a1bea Remove double negatives from code
+dc29f86 [LINT] enable unneeded-not
+74e4fe9 Simplify conditionals with multiple isinstance calls
+fe960f8 [LINT] enable consider-merging-isinstance
+3bf6d0e Use foo in (bar, baz) for conditionals
+15fa0d5 [LINT] enable consider-using-in
+d12115a Don't use len() in conditionals
+4d8f6a6 [LINT] Enable len-as-condition
+01aacb1 Add a pylintrc to help track code style
+cf7e711 Fix backslashes in strings
+587683f Use collections.abc for Python 3.8 compatibility
+0eacfb9 Bump Jinja2 requirement because of security issue CVE-2019-10906
+5496739 Merge pull request #120 from plastex/fix_tests
+718a10c Update tox.ini to test python 3.5, 3.6, and 3.7
+044bc62 Update local testing instructions
+0834feb Fix import issue in gspdfpng.py
+e307300 Try again tox and travis...
+e05d0f5 Add more python versions to travis
+084d2f4 Launch tox in travis
+bd37445 Split requirements for test and add tox.ini
+9294e5a Activate Longtable tests + factor out helpers
+f573b6c Try again: don't use cli tool in alltt test
+bbe6581 Change temp directory strategy
+d9df3c4 Try to fix Alltt test TEXINPUTS
+ba2c7b2 Try to fix dvi2bitmap and remove dvipng from Travis
+5ad36fe Try adding sudo
+7a994ab Install dvipng
+04fc4cc Adds jinja2 to requirements
+ffba685 Add unidecode to requirements
+23d3389 Try to fix Travis
+e8d2800 Restore all tests by removing harmful unittests/__init__.py
+4ab3a8a Update setup.py
+8a835f3 Update README.md
+ec7d90c updated version, published to pypi
+254f4c2 Update setup.py
+5dc22cd Update README.md
+87a8be9 Enable testing with Python 3.7
+3dbe260 Drop unneeded EndInput handling
+ac3b2c6 updated version, published to pypi
+c2850cf Potential fix for Python 3.7 generators
+95067d7 Merge pull request #105 from dalcde/tiarno/python3
+9cc2cc6 Fix dvisvgm imager
+3e67138 Fix dvi2bitmap as well
+d879217 Fix error in gspdfpng Imager
+fc405f9 Merge pull request #101 from niklasp/python3
+88f61c8 add a section about testing in the readme
+cc913f8 make pytest output a little more verbose for better test reports
+dc44208 some polishing
+bd0b2ec markdown readme
+238ccd7 rename README to README.md and add build and coverage status
+b7e0c40 add coveralls
+b3396ca try to make tests pass on travis
+9fb2e25 correct travis ci name
+5390a2a Merge branch 'python3' of https://github.com/niklasp/plastex into python3
+7b131a6 add travic CI
+10f51da make unittests pass generally
+27a0f1b Merge pull request #98 from PatrickMassot/debugplastex
+d2eb598 Merge pull request #96 from PatrickMassot/numberwithin3
+4369b70 Python package for debugging purposes
+73bba7a Remove file added by mistake
+5eb432f Test amsmath numberwithin
+63b5e1b Implements numberwithin in amsmath package
+f06e54e Merge pull request #94 from PatrickMassot/python3
+0cffa47 Fix title bug in newtheorem
+c241f30 Merge pull request #92 from PatrickMassot/python3
+ccb465f Adds missing file plasTeXrc in setup.py
+7c60ba0 Merge pull request #88 from PatrickMassot/fix_setup_py3
+2f9112f Fix a test that didn't work once installed
+e7e458b Remove useless typo in HTML5 renderer
+94094c0 Merge pull request #87 from PatrickMassot/fix_setup_py3
+ba25dc7 Add HTML5 files to setup.py
+c147a61 Fix docstring escaping in amsthm
+9109013 Fix relative import in gsdvipng
+8380156 Merge pull request #85 from niklasp/python3
+e410198 fix #83
+1cdf2ff Merge pull request #79 from PatrickMassot/default_values_python3
+d880931 Fix vars or None typo
+bd9c94a Typos fixed (thanks tests!)
+f767437 Fixes #77
+f7decb2 Merge pull request #75 from PatrickMassot/python3
+dc83204 Fix functionnal test for python3
+121d949 Typos documentation
+40e2864 Document PackageResource
+23897ff Functional tests for PackageResource used in HTML5
+55d3056 Fix broken test
+1581d4c Add unit tests for PackageResource
+e8245c6 Clarifies python package search documentation
+2cdb027 Allow package resource to be next to tex source
+c784ed9 Move processFileContents callback list
+6dc34ee Add forgotten method Document.addPackageResource
+c5ddfe8 Hide all package resource action into alter method
+92b111a New attempt to handle package files
+b452ff7 Minor template fixes
+81c2b6e Correct outdated docstring
+440a3f0 Forgotten modifications from master
+7a715e3 Add packages specific folders in HTML5
+2c9ad25 Documentation for HTML5 Renderer
+2c72de6 Fix half broken cherry-pick for unicode Index
+4cd7cd4 Replace two forgotten new.classobj by type
+8556e00 Add HTML5 + one tiny modification to PT renderer
+db4d933 Adds MathEnvironmentPre and fix smallmatrix
+e236240 Documentation NoCharSubEnvironment
+eb34510 Fix #45 by adding  NoCharSubEnvironment
+f999d58 Allow macros to define post-parse callbacks
+192bdfe PIL shouldn't try to handle svg
+76afca1 Implements DeclareMathOperator from amsmath
+f312576 Implement newtheorem and proof
+056f272 Use unidecode to compute index group
+0fca118 Partial support for `amsthm.sty` LaTeX Package
+bbe2c99 Issue #38 - Add "the" macro support
+59adde6 Add template for textsubscript
+d4bc297 Issue #28 - Fix name checking when counter starts with "the"
+7365694 Spell out "language"
+8aa5084 Document the lang-terms option
+1676496 Add textsuperscript template for XHTML renderer
+25a904b Documentation Jinja2 templates support and renderer config
+46ab27b Allow renderers to define config options
+e1b6307  Filter exception more wisely for package debugging
+ed39e9c Support Jinja2 templates
+802da6d Make sure original options are used as defaults
+2562586 Fix default-engine
+7e6fc9d closes #20
+fd12eed Merge pull request #74 from PatrickMassot/python3
+70c6824 Fix bug in TeX.py loadPackage
+e166d79 Fix doc as in 9599b085bbd8c31f
+48f86ac Merge pull request #72 from PatrickMassot/python3
+1a1a3cb Fix string syntax in unittests/Encoding.py
+7b970d2 Add DOM.Node.__eq__ and __hash__
+816c41b Remove useless list(...)
+a438f45 Fix FunctionalTests (python3 syntax for raise)
+3ff3e02 Fix Element test
+45f1cd4 Fix NewCommands test (unicode -> str)
+3976be4 Fix ArgumentParsing tests
+4e4d922 Fixes ConfigManager values error
+85b6805 Allow to use BeautifulSoup4 in tests
+7f43835 Fix harmless but confusing typo in Longtable test
+833c567 Add __init__ in unittests/DOM
+2fec123 Add pytest.ini to allow test collection by pytest
+06def35 Tiny modification of main script for test running
+e2746ef Fix #66: Encoding test needing en_GB.latin1 locale
+bd1f800 Fix Longtable caption test
+a229fc3 Temporary fixes to be able to work on python3
+5209229 fix to codec open call
+394dd5c changes option so etree.tostring returns string
+008d527 changes subprocess calls to output str, not bytes
+4423409 adds minimal test for Imager
+4ce54ef adds simple testing pgm
+32fa2c9 fixes xmlstr for nested string objects
+bc09ba8 removes urlstyle invoke
+0f939ba removes unicode translating elem tree to string
+f6bd39a changes file writing from text mode to binary
+756d41a changes type to isinstance
+0b9a425 changes to line endings
+ec3c870 changes isinstance to type= for str compares
+7296136 fixes for Imagers plus their templates
+3d77b46 updates simpletal to python3
+289a1cd fixes parsing phase
+d8126bd final draft zero code conversion
+3739634 cleans up Renderers
+f3570d4 fixes bug on input tag. now returns str
+e006afb cleans up ConfigManager, DOM, Imagers, Packages
+6ad5089 cleans up Base
+2decbb1 cleans up top-level files
+07f852d more unicode changes, still not working
+060b323 makes all absolute imports. still broken
+3bc749f closes #20
+936025a Merge remote-tracking branch 'refs/remotes/origin/master' into python3
+2880a7b first commit after 2to3, breaking changes
+1c0dd4d initial commit after 2to3
+89c0398 Fix dimension converters
+30b543d define readInteger value to None before read.
+bbac491 Merge pull request #18 from mungerd/patch
+8b058b4 support nested maths in MathShift
+72901bf Fix non-environment verbatims
+916916f Merge branch 'master' of https://github.com/tiarno/plastex
+dd093c3 Remove extra sqrt definition
+d63b614 Merge pull request #14 from mungerd/patch
+cdb7f54 support \endverbatim
+d1b2c81 Merge pull request #13 from mungerd/patch
+3246049 support both string and file input in listings
+a1f3ebb single line breaks in listings package
+eb92b88 fixes #10, bom mark in utf-8 files.
+a8c0556 Merge pull request #9 from axlmad79/master
+e8f0a51 Add mathchardef to definition TeX primitives.
+2b3576e fixes fatal exception to keep running: nonumber inside equation
+0f25502 Merge pull request #6 from tiarno/logging
+99ddba7 support for logging to file instead of console
+2a273a2 force content on article title
+6726635 added condition on docbook equations
+9622a45 fix bug in xpath expression
+078e841 added file type to gitignore
+33e8afb Create .gitignore
+80581e7 merge docbook reorganization changes
+608b13b Delete .gitignore
+de86e03 Create .gitignore
+d296b2f Merge branch 'master' of https://github.com/tiarno/plastex
+b1d76f9 - Fixed problem with parsing \if content - Fixed issue with index content showing up - Fixed catcode problem with & in usepackage options
+94281cd Update README
+8ef960a Merge pull request #3 from paternal/encoding
+77104d5 Solved encoding bug
+e2a304a Merge branch 'master' of https://github.com/tiarno/plastex
+42b5d5b Add trademark, copyright, registered
+01ab16f Update README
+559d2b2 Update README
+40790eb Added ampersand as a special character in urls
+5889bb0 Change \hyperref to use the \hyperref[label]{text} form rather than \hyperref{url}{category}{name}{text} form.
+8f4e5a3 Fix executable permissions and fix unicode issue with strftime
+e670fae initial migration
+99e5ff7 Fix % in urls
+41a48c0 Fixed incorrect variable reference
+cda29e4 Add dummy file to prevent endfloat.sty from being loaded.
+682a0d2 Change interwordspace to a plain space character
+5c2bd2c Fix author / year separator
+275cb99 Fixed separator issue in citep
+091b28d Fix sourcing of empty tokens
+4acf6f2 modified hyperref and verbatim templates for docbook v 4.5
+d53e77a change label to id
+62fe2d5 Add namespace declaration
+03d681a Add --exact option to dvisvgm to prevent descenders from getting clipped
+595480d Fix dvisvgm
+55fe328 Fix dvisvgm imager
+0facb75 Fix typo in nexttok
+1198ebb Add hyperref commands
+133ccd6 Fix text renderer to allow subclassing
+3cc2759 Fix maketitle
+a817ff8 Move space commands into global namespace
+a6b7874 Fix prime
+84eedd1 Added unicode character for prime
+ea97371 Fix unicode in xml dumps
+09f7067 Fix url in docbook
+15eb302 Fix url package
+76bb78d Disable Entities.py and put all entities in Math.py and Sentences.py
+87f7cd3 Added imager logger
+72e494c Add html package
+366eebf Add german quotes
+5eb469c Add dummy stubs to prevent loading of .sty files
+11331ae Updates to version number, graphics scaling, and unit tests
+1fec66d Add placeholder for xr-hyper
+e26f697 Add default values to broken namerefs
+d064196 Fix typo
+8b2fa3b Add nameref support
+f692c6b Fix i18n.xml parsing; add caret to accents
+032626b Fix filename numbering
+35e24f1 Allow overriding of template loader
+aa5a56d Add bbold package stub
+ccdaee9 Fix possible infinite loop in context; add new package stubs
+8a6e4f9 Add image depth
+0fe3801 Use unicode for german quotes
+bc0cd71 Apply patch to wrapfig.py
+e34e29e Apply patch to listings.py
+203576a Apply submitted patches
+7091e6e Add embed package which allows embedding raw HTML markup
+2a41b9b Applying docbook patch from Tim Arnold
+e4c1327 Allow lets to be comment tokens
+3de7db3 Remove old image adjust code
+32adc21 Add new packages
+f185a62 Fix copying where copystat is not allowed
+aa98e82 Fix single template compilation
+7e7b67c Fix index page numbers for Python 2.6
+ed3a0ac Add multiple template parsing to all template types
+42ef9db Fix listings newlines
+5437572 Fix problem with if blocks and comments
+acd8698 Add line numbering support to listings
+f8c711d Fix enumerate counters again
+1288811 Fix nested macros
+fd9feee Implement bbding package
+7ee8992 Fix counters redefined through renewcommand
+96b098f Fix verse/quote indent and spacing
+41f7cec Fix enumerated lists with setcounter
+103a9c6 Do not copy dot files when copying theme files
+39dacf2 Add pdftoppm imager
+b5d0f42 Fix issues in listings package
+1b56fc8 Add EPUB renderer
+d3512e2 Fixed problems with TEXINPUTS on Windows
+5340640 Fix image cropping issue when getting wrong background color
+67d53c6 More if processing changes
+cefff9c Rework if commands so that they work when wrapping a verbatim environment
+5bf0034 Fixed capitalization
+430c530 Add new package
+6709797 Added a number of packages on request
+36e7d3d Added --xml option to plastex for debugging
+66aa652 Added dots command
+709ddcb Put in checks for cite attributes
+ee4a87a Fixed multiple author problem; Fixed verse environment in text renderer
+c3f2d1c Fixed problem with arrays in text renderer
+8b148b3 Added equation* to XHTML templates
+0e8f235 Removed amsmath eqn numbers; fixed subfig formatting
+527b8e5 Fixed parsing problem with negative numbers
+2986f8f index commands should not generate text
+821b82e Fix another setParent issue
+66a1b3a Fix problem with parentNode in section arguments; fix encoding for hhp files
+f507055 Do not fail when there is no TEXINPUTS variable
+a8a1c4e More Python 2.6 changes
+19cc0e3 Patched for Python 2.6
+1605fb7 Fixed counter initialization problem
+3ea8ec3 Fixed filename hang issue
+ff103f6 Fixed post-processing of paras
+a8c51bc Fixed url rendering
+c68af21 Added childrenSource to the Macro class
+792d75b Updated benchmarks
+2a48f6d Fixes #1836938 - input search path fix
+915c15a Fixes #1939425 - Allow ampersands in package options
+ea66be0 Fixes #1913733 - support for CMYK colors
+7719fed Fixes #2038818: When a math token is the beginning of a token, special processing has to occur
+366b563 Fixes #2038676 - missing * on includegraphics
+c128284 Fixed some rendering problems
+8deb5af Added "gen" class to all generated images
+9f7f65c Fixed errors
+fc23d0d Added class= to displaymath images
+cc5b95a Fixed bibliography name clash; Added role=math to DocBook
+45f72a3 Move to 0.9
+d4c2651 Updated math templates for DocBook
+6b4ab8e Add package files
+b6fed1a More DocBook fixes; lipsum fixes
+7787cfe Updated DocBook renderer; added lipsum package
+e2d2f78 Change identifier of DTD
+d5cbc6f Update installer for DocBook
+0316446 Updated installer
+a3a191d Updated installer
+8200c2f Turned off splitting if only a single filename is given
+abe0912 Added first pass of DocBook renderer
+3a31613 Fixed see and seealso problems in index; added document context to global template namespace
+c055c5f Updated language terms
+c102a54 Fixed problem with macros in citation pre/postnotes
+b3a3143 Fixed alignment when lefteqn is used
+26691bb Add cr class
+ee4e33c Made filename order correspond to the order of the nodes in the document
+326096a Added subfigure package
+419a23d Add new option for image resolution
+adc1731 Add memoir specific commands that do nothing in plasTeX
+86d31cb Fix arrays
+3d68bda Add booktabs commands
+fd1f1ed updating benchmarks
+10b0cd5 Make sure that link tag titles only have text in them
+b7a87c7 Add support for see and see also keys in the index
+feb13af Updated Eclipse index format to newer version
+dc9b05d Use fulltableofcontents rather than just tableofcontents to get all entries, not just those that create files
+9424714 Fix problems in loading aux file for natbib
+4efa693 Fix problems in loading aux file for natbib
+6ad1b0e Make sure that the unicode function is called and not just str
+5158a17 Fix problem with pickling text nodes
+d5b80fd Use name= attribute on index tags for javahelp
+ac6cd6e Fixed hyperref warnings
+3d987a9 Change style for footnotes
+999cf9c Changed footnotes to use numbers
+7837b64 Changed icon for documents
+8b8e736 Use jobname for chm output file
+75e5bc4 Use jobname for chm output file
+195651c Finishing updates to CHM templates
+39f0ee4 Updates to help file generators
+a648854 Add index for Eclipse help
+e6e3797 Added support for Java help v1
+6912687 Add support for lefteqn in eqnarray
+66c93d5 Added files for creating Eclipse Help
+6e79921 Fixed issues in map file
+b204247 Added helpset file for Java help
+4120b5e Added Java Help aux file rendering to XHTML
+6447c75 Make it possible to render each sections table of content differently
+cfc947a Major changes to footnotes so that they appear on the bottom of the page rather than as popup divs
+00a216f Fixed hyperlinking
+5da83cb Fixed equation alignment issues
+d56abd9 Fixed problem with dots being cropped out
+44325ea Fixed cropping problem
+e07015b Trying a new alignment method with eqnarray that does not mess with MSIE so much
+df63999 Fix some issues with pattern not matching properly
+8d685b0 Fixed alignment problem in MSIE with eqnarrays
+bfbe38a Added a new option for transparent backgrounds in images
+e35a608 Add package files
+ae21429 Implemented textcomp package
+e1749ed Fixed paragraph issues in changebar
+73c7c57 Added changebar package
+7ac5d67 Added empty package for a4wide
+2477763 Fixed ordering of regex substitutions to make sure that empty table cells always get a non-breaking space
+6815580 Removed unneeded code
+5546ba4 Added a way for users to include language terms
+9cd2495 Updated unit tests
+80a4411 Made bibliography use correct latex macro for title
+699aafb Fixed alignment in eqnarray; Removed blank paragraphs in post-processing
+beaf455 Changed method of aligning equations from relative position to vertical-align
+19fe0d4 Fixed problem if non-strings get into the index sort keys
+26537f0 Added a terms dictionary to hold the current set of language terms
+f5f6f5a Added new functional test fixture.  Just create a 'sources' directory for your .tex files and a 'benchmarks' directory for benchmark files.  The FunctionalTests.py module will render them to HTML and compare the results to the benchmark.
+8010538 Made encoding errors configurable; Made default error handling in page templates use xmlcharrefreplace
+6d399d9 Changes for new XML based language terms
+f1ca79a Beginnings of a man page renderer
+2291975 Only use the first definition of a macro or accent in the XML file
+15db01e Added plain text renderer
+d28e265 plasTeX/Context.py
+4318165 Fixed symlinks if one exists already
+70a4062 Language installation
+aa2746f Fixed cropping problems when image content was farther left than the registration mark
+5db7085 Undo before, after, and between code until more fully baked
+ca60bb5 Make sure that the colspec has enough entries
+26aaaba Removed old language files
+11d56b6 Moved localized terms to XML file
+ba94b5c Fixed problem with missing keys
+0999f65 Made indent size of flush left equations part of the CSS information
+6096f47 Stored documentclass options in a generic key called 'documentclass'
+8976f86 Added support for the fleqn option
+ae3705a Added starred version of longtable
+cf7cc59 Check for key errors
+004df14 Fixed special catcode handling for particular argument types
+4d4fd69 Added option to not skip leading whitespace before an argument
+68eec48 Undo last debugging change
+4b0c795 Partially implemented before and after formatting for table cells
+14e731b Implemented @{...} inter-cell content
+744d939 Fixed problem with enumerated lists that didn't enumerate
+2826b30 Implemented shortvrb package
+9caab0f Implemented compression of number ranges
+5154d43 Added new theme for testing purposes
+59bb0f7 Added author compression
+261e244 Fixed problem with options
+8934f30 Fixed longnamesfirst option
+f0454db Added starred versions of commands; added misc commands
+cb9ac81 Forgot template file
+c52e658 Minor fixes to bibliography
+ec1df55 Major revisions to the way bibliographies work; major work on natbib package
+a4f6cd8 Reworked the way captions and captionable objects are detected.  This makes it more extensible.
+bf61799 Reworked caption code so that table and figure environments get the caption as a title, but only if there is just one caption within the environment;  Also attach captions to tabulars and figure-type objects as titles within the table and figure environments.
+92e79f9 Simplified ToC changes even more
+ca7e607 Slight optimization on last push
+73c867d Only display a ToC if at least one of the subsections creates a file.
+9fb1a90 Fixed textContent problem if current node had unicode attribute, not just child nodes
+6159424 Macros that have a unicode attribute now return that variable in the textContent attribute
+9b31382 Incorporated Tim Arnold's changes to ams macros
+d8cf57f Fixed problem with loading bibliography style
+f8b8a0e Cleaned up warnings when loading paux files; turned off warning about bibliography styles; Updated web page with new links
+48d8ca7 Added scaling factor for included images; Fixed problem with integer options
+8589b4d Updated isoent license
+c6fc704 Fixed problems with table captions and box widths
+eb7bb5d Let installer put in Python version
+3f1d422 Implemented the kill macro
+f8e352d Added package unit tests
+610b65c Updated pyuca license
+f0049b3 Updated pyuca.py with license
+09dc077 Cleaned up stylesheets
+3be0aaf Fixed installation problem
+c53febc Fixed licensing issues
+33607fa Changed to MIT license
+534e42c Fixed counter reset code
+2894475 Fixed caption on longtable
+20983b3 Save the first caption
+9f44ab5 Fixed broken referencing
+25c12ce Set the caption node on longtable in case someone needs it
+0cfbc9e Made it possible to not have paragraphs on a list item
+6fa0261 Fixed external link nodes
+2fd7e66 Fixed a bunch of problems with the bibliography
+ed4fab6 Made it possible for integer arguments to take negative numbers
+1fd5523 Made renderables inheritable
+10948d9 Fixed problem when double-backslash was followed by a displaymath
+c531c2e Made sure that empty cells always have a non-breaking space so that borders show up
+d6e8e29 Made colspecs more forgiving and collapsed table borders
+8975784 Fixed a number of problems with the bibliography (especially natbib)
+fe6a8da Fixed problem with table headers
+f417e0a Fixed ID generation and filename issue, moved bibliography information to userdata
+e338f7f Fixed problem with commas in single valued options
+8883b4c Fixed parentage of macro arguments
+ddc851f Cleanup before new release
+687ecd4 New release
+fa3af53 Removed debugging code
+f730936 Made generated IDs predicatebl
+edeb6a5 Fixed column counting routine
+2d50241 Added information to make cals table easier to generate
+db7c322 Fixed appendix numbering
+3ed214b Fixed appendix numbering
+0b9e316 Fixed digeting code in bibliography
+f18d35e Accidentally push some test code
+2f6281a Added ability to label arbitrary objects, fixed tocdepth problem
+9742d77 Fixed paux problem
+6f8208c Fixed paux problem
+b218504 Fixed paux loading problem
+c449731 Fixed duplicate printing of child nodes
+c81630a Fixed duplicate child nodes being exported to XML
+466154f Fixed file naming problem
+99a6a54 Fixed a problem with = when used with arguments
+282b064 Fixed problem when parsing arguments that were merely a single escape sequence
+3293230 Fixed counter problem with index/bibliography in articles
+05fdda9 Fixed counter problem with index/bibliography in articles
+e85e2bd Fixed counter problem with index/bibliography in articles
+acf19ba Fixed problems with bibliography and index
+7b599ff Fixed caption handling in longtables
+2df1223 Turned off minitoc
+a245d2c Turned off minitoc
+c51fee4 Added S5 support files
+3c34e56 Started support for beamer and an S5 renderer
+761807b Fixed up color package
+8a2a0d3 Revamped verbatim to allow it within a newenvironment
+007c0e0 Fixed image sorting problem
+0420af6 Fixed ZPT parser problem
+c980265 Adding pslatex package
+d6a4db1 Updated installer
+87c4798 Remove imager message
+6c0c323 Added log message for imager
+6508e6f Fixed image including problem
+bb95715 Update amsmath
+a2ccc91 Added minitoc package
+754465a Final cleanup for 0.7
+b0e7945 Finished up generalization of Page Template rendering
+d9c5316 Added many new packages, support for new template types
+9d72432 Created a generic page template renderer
+cfa0f1c Created a generic page template renderer
+0495dae Made plasTeX work with Python 2.5
+ad167e9 More support for hyperref and memoir
+02ab415 Added hyperref support
+ccbda7d Added scaling options to includegraphics
+75c4b24 Fixed counter format issue
+8e59d5b Fixed problem in bgroup, and added support for wrapfig
+c2c0d7f Added support for some amsmath environments
+fc60042 Added support for Windows in the imager
+cd02fae Added support for Windows in the imager
+35c2d36 Added new packages
+e5caf54 Added more CJK support, improved index sorting, fixed image caching problem
+b290f9a API changes to make method names more consistent, document title fixes, etc.
+5b394f4 Fixed some language loading problems and document title issues
+c379171 More imager updates
+4a3ef4a New imagers
+a1e5802 Script to assist in OS X CoreGraphics imager
+01931eb Various fixes including much work on equation numbering, and rendering eqnarray as a table in HTML
+3b52403 Fixed more imaging bugs, fixed equation alignment, various other XHTML rendering fixes
+5821953 Image adjustment code for inline equations
+2e635eb Lots of imager and renderer fixes, new paragraph model that works for HTML
+88ba731 Image generation fixes, equation issues, other renderer stuff, etc.
+a89d915 Updated documentation files and fixed bibliography zpt
+9d5a080 More cleanup
+ee3a111 Adding web page
+279eba8 Editing changes
+72d6a7e Adding the user manual
+42bc0d3 New installer
+0f72e31 Installation info
+317fd4f Added installation instructions
+fb99e79 Tons of fixes and features
+2cb2b8a Added new XML entities functionality
+208b00b Removed some things that were finished
+631a796 Lots of updates including index support and some big API changes
+d9fdafe Lots and lots of fixes
+a512174 Lots and lots of fixes
+e688f68 Various bug fixes and added logging
+823b4d2 Cleaned up a bunch of parsing and context problems
+feb1ba5 More bibtex fixes, DOM fixes, and normalization
+e622797 More bibtex fixes, DOM fixes, and normalization
+300357e More bibtex stuff, and natbibcd ../..!
+a157249 Lots of renderer updates, and a first pass at bibtex
+560f371 Finished implementing most LaTeX commands, parsing fixes, ...
+4d70522 Added command line handling and other fixes
+e6dfe27 More renderer updates, updated ZPTs file format
+8dee0dd More rendering updates, images auto-crop by default
+5704229 Lots of fixes, many renderer updates
+e637e85 Various fixes
+306cb61 More renderer updates
+6ddc974 Updated rendering
+d6890a0 Pulled rendering code into separate class, performance improvements
+cce1c29 Added navigation, updated templates, add file splitting, etc.
+b7646ab Cleaned up minor problems found my pychecker
+0d28cbc Got rendering working with utf-8 input
+a5159a0 hooked imager back into renderer
+3d0b654 Implemented paragraph digestion
+546bae4 Cleaned up argument parsing
+97c3333 Implemented counters, and various fixes
+9c2a362 Various fixes, improved arg parsing, table borders, ...
+d9e0c5e Various fixes
+9ab1570 Forgot to remove this file earlier
+d74a46b Updated dimen, count parsing
+052371e Minor cleanup, changed "core::" to "active::"
+d575a87 Added many TeX commands, various fixes
+c9b7d2b Reorganizing and many, many fixes
+dc61cda Fixed labeling code
+0d7c448 Parameters, sourcing active and core macros
+45f16e0 Got parameters working
+49a47d9 Active chars, new names for core macros (i.e. &, ^, _, etc.)
+4635bf7 Updates to argument parsing, labels/refs, counters, generators, ...
+7c853fd Updated tabular stuff, changed parts of tokenizer to use generators
+9046ae6 Updated table processing
+091d784 Changed sourcing to use the "source" attribute instead of using repr()
+ba3ab46 Refactored DOM elements and re-inserted them back into Tokens and Macros
+61a8973 More cleanup, also got verbatim working again
+b1ccdb1 DOM and source updates
+7375107 More DOM-like additions
+00d6313 Adding DOM-like stuff to tokens
+6a31aa6 Cleaning up
+4a03545 Updated more context handling stuff
+cc5d290 Cleaned up a bunch of context stuff and disconnected DOM from the parsing objects
+c94ad7f Cleaned up some context related code
+3916c61 Updating tests to match new parsing work
+fdbafec Parser cleanup
+509cdda More parsing updates
+5f8f56a Updated parsing functions
+279e47f Updated context handling, inputs, unittests, etc.
+ba84670 Updated comments, improved argument casting, cleaned up more in the Tokenizer separation
+941fd88 Added input stack and separated out the Tokenizer
+279084e Major, major, major reworking...
+2c297bf More DOM tests
+59306ae Updated DOM tests
+6c5e230 Updated DOM tests
+f8eb05c Updated DOM stuff
+3ab6f03 Updated DOM building stuff and logging configuration
+71755e0 Cleaning up
+3373c40 Adding missing file
+9c40f2e Initial revision

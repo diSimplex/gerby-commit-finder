@@ -1,0 +1,12 @@
+diff --git a/plasTeX/Packages/xy.py b/plasTeX/Packages/xy.py
+index ad81498..d2b54c0 100644
+--- a/plasTeX/Packages/xy.py
++++ b/plasTeX/Packages/xy.py
+@@ -4,3 +4,7 @@ from plasTeX import Command, Environment
+ 
+ class xymatrix(Command):
+   args = 'str'
++
++  class EndRow(Command):
++    """ End of a row """
++    macroName = '\\'

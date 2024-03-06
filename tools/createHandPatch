@@ -1,0 +1,36 @@
+#!/usr/bin/env python
+
+# This simple Python script creates a patch file
+
+# NOTE you can use `rediff` to correct a diff if you have edited by hand.
+
+import os
+import subprocess
+import sys
+
+testPlastexDir  = '~/tmp/gerby-plastex'
+
+if len(sys.argv) < 2 :
+  print("usage: createHandPatch <<filePathToPatch>>")
+  sys.exit(1)
+
+filePath = sys.argv[1]
+filePath = filePath.lstrip('filesChanged/')
+
+procResult = subprocess.run(
+  f"diff -Naur a/{filePath} b/{filePath}",
+  stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+  shell=True, text=True, cwd=testPlastexDir
+)
+
+if procResult.returncode == 1 :
+  handPatch = os.path.join('handPatches', filePath+'.diff')
+  os.system(f"mkdir -p {os.path.dirname(handPatch)}")
+  print(f"Saving patch: {handPatch}")
+  with open(handPatch, 'w') as pF :
+    pF.write(procResult.stdout)
+    pF.write("\n")
+else :
+  print("--------------------------------------")
+  print(procResult.stdout)
+  print("--------------------------------------")

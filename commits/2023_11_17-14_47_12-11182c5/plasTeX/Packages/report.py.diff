@@ -1,0 +1,14 @@
+diff --git a/plasTeX/Packages/report.py b/plasTeX/Packages/report.py
+index 03187e3..7e938a8 100644
+--- a/plasTeX/Packages/report.py
++++ b/plasTeX/Packages/report.py
+@@ -1,8 +1,8 @@
+ #!/usr/bin/env python
+ 
+ from plasTeX.Packages.book import *
++from plasTeX.Packages import book
+ 
+ def ProcessOptions(options, document):
+-    from plasTeX.Packages import book
+     book.ProcessOptions(options, document)
+     document.context['theequation'].format = '${equation}'

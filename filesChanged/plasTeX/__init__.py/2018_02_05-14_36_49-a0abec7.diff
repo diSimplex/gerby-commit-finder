@@ -1,0 +1,12 @@
+diff --git a/plasTeX/__init__.py b/plasTeX/__init__.py
+index f4ababc..f6df3db 100644
+--- a/plasTeX/__init__.py
++++ b/plasTeX/__init__.py
+@@ -792,7 +792,6 @@ class TeXDocument(Document):
+         ('"`', chr(8222)),
+         ('"\'', chr(8220)),
+         ('`', chr(8216)),
+-        ("'", chr(8217)),
+         ('---', chr(8212)),
+         ('--', chr(8211)),
+ #       ('fj', unichr(58290)),

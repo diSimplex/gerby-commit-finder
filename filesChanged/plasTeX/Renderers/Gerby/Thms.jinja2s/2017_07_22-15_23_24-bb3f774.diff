@@ -1,0 +1,17 @@
+diff --git a/plasTeX/Renderers/Gerby/Thms.jinja2s b/plasTeX/Renderers/Gerby/Thms.jinja2s
+index 730a303..6bfb737 100644
+--- a/plasTeX/Renderers/Gerby/Thms.jinja2s
++++ b/plasTeX/Renderers/Gerby/Thms.jinja2s
+@@ -1,9 +1,9 @@
+ name: thmenv
+-<article class="env-{{ obj.thmName }}" id="{{ obj.tag }}">
++<article class="env-{{ obj.thmName }}" id="{{ obj.userdata['tag'] }}">
+   {% if obj.title %}
+-    <p><a href="#"><span class="environment-identifier">{{ obj.thmName|capitalize }} {{ obj.ref }} ({{ obj.title }})</a>
++    <p><a href="/tag/{{ obj.userdata['tag'] }}"><span class="environment-identifier">{{ obj.thmName|capitalize }} {{ obj.ref }} ({{ obj.title }})</a>
+   {% else %}
+-    <p><a href="#"><span class="environment-identifier">{{ obj.thmName|capitalize }} {{ obj.ref }}</a>
++    <p><a href="/tag/{{ obj.userdata['tag'] }}"><span class="environment-identifier">{{ obj.thmName|capitalize }} {{ obj.ref }}</a>
+   {% endif %}
+   {{ obj }}
+ </article>

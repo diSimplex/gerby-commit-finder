@@ -1,0 +1,15 @@
+diff --git a/plasTeX/Renderers/Gerby/__init__.py b/plasTeX/Renderers/Gerby/__init__.py
+index 6021caf..f1d1142 100644
+--- a/plasTeX/Renderers/Gerby/__init__.py
++++ b/plasTeX/Renderers/Gerby/__init__.py
+@@ -157,8 +157,8 @@ def tagRollCall(document):
+         node = stack.pop()
+         try:
+             tag = node.userdata.get("tag")
+-            if tag and tag in tagChecklist:
+-                tagChecklist[tag] = True
++            if tag and tag in attendanceSheet:
++                attendanceSheet[tag] = True
+         except:
+             pass
+ 

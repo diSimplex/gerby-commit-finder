@@ -1,0 +1,20 @@
+diff --git a/plasTeX/Base/LaTeX/Index.py b/plasTeX/Base/LaTeX/Index.py
+index ead43b1..87f8ab5 100644
+--- a/plasTeX/Base/LaTeX/Index.py
++++ b/plasTeX/Base/LaTeX/Index.py
+@@ -11,7 +11,6 @@ from plasTeX import Command, Environment, IgnoreCommand, encoding
+ from plasTeX.Logging import getLogger
+ from plasTeX.Base.LaTeX.Sectioning import SectionUtils
+ 
+-import pdb
+ log = getLogger()
+ 
+ try:
+@@ -27,7 +26,6 @@ except ImportError:
+     def unidecode(s):
+         return s
+ 
+-
+ class hyperpage(IgnoreCommand):
+     args = 'page:nox'
+ 

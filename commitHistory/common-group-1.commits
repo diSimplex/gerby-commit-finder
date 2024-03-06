@@ -1,0 +1,4 @@
+f06e54e Merge pull request #94 from PatrickMassot/python3
+0cffa47 Fix title bug in newtheorem
+c241f30 Merge pull request #92 from PatrickMassot/python3
+ccb465f Adds missing file plasTeXrc in setup.py

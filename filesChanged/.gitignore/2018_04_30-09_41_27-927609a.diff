@@ -1,0 +1,10 @@
+diff --git a/.gitignore b/.gitignore
+index bc48217..8a4dafc 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -54,3 +54,5 @@ docs/_build/
+ target/
+ *.project
+ *.pydevproject
++
++*.swp

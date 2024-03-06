@@ -1,0 +1,21 @@
+diff --git a/plasTeX/Packages/xy.py b/plasTeX/Packages/xy.py
+index 9d5ed23..e582f23 100644
+--- a/plasTeX/Packages/xy.py
++++ b/plasTeX/Packages/xy.py
+@@ -16,7 +16,15 @@ class xymatrix(Command):
+     pass
+ 
+   class ar(Command):
+-    pass
++    args = '[ misc:str ]'
++
++  class arAt(Command):
++    macroName = "ar@"
++    args = 'arType:str [ misc:str ]'
++
++    def postArgument(self, arg, value, tex):
++      self.argSource = self.argSource.replace("~ ","~")
++      super(Command, self).postArgument(arg, value, tex)
+ 
+   class omit(Command):
+     @property

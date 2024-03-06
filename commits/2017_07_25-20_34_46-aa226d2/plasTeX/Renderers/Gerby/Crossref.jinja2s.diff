@@ -1,0 +1,10 @@
+diff --git a/plasTeX/Renderers/Gerby/Crossref.jinja2s b/plasTeX/Renderers/Gerby/Crossref.jinja2s
+index 16e4b9f..df1d2fa 100644
+--- a/plasTeX/Renderers/Gerby/Crossref.jinja2s
++++ b/plasTeX/Renderers/Gerby/Crossref.jinja2s
+@@ -1,4 +1,4 @@
+ name: ref
+-<a href="/tag/{{ here.idref.label.userdata['tag'] }}">{{ here.idref.label.tagName|capitalize }} {{ here.idref.label.ref }}</a>
++<a href="/tag/{{ here.idref.label.userdata['tag'] }}">{{ here.idref.label.ref }}</a>
+ 
+ name: label

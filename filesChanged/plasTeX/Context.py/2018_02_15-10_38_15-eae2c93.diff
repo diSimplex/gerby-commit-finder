@@ -1,0 +1,14 @@
+diff --git a/plasTeX/Context.py b/plasTeX/Context.py
+index 4630c39..a2eed50 100644
+--- a/plasTeX/Context.py
++++ b/plasTeX/Context.py
+@@ -199,6 +199,9 @@ class Context(object):
+         # Create a global namespace
+         self.push()
+ 
++        # Meta information
++        self.meta = {'lines': 0}
++
+         self.warnOnUnrecognized = True
+ 
+         if load:

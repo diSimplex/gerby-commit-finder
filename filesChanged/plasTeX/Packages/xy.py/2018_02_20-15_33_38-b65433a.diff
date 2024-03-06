@@ -1,0 +1,17 @@
+diff --git a/plasTeX/Packages/xy.py b/plasTeX/Packages/xy.py
+index 2c1d6de..9d5ed23 100644
+--- a/plasTeX/Packages/xy.py
++++ b/plasTeX/Packages/xy.py
+@@ -1,9 +1,10 @@
+ #!/usr/bin/env python
+ 
+-from plasTeX import NoCharSubCommand, Command
++from plasTeX import Command
+ 
+-class xymatrix(NoCharSubCommand):
++class xymatrix(Command):
+   args = '{ str }'
++  doCharSubs = False
+ 
+   class EndRow(Command):
+     """ End of a row """

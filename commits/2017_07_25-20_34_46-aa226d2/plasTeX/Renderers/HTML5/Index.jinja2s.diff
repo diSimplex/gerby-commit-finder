@@ -1,0 +1,13 @@
+diff --git a/plasTeX/Renderers/HTML5/Index.jinja2s b/plasTeX/Renderers/HTML5/Index.jinja2s
+index 99253a7..466deee 100755
+--- a/plasTeX/Renderers/HTML5/Index.jinja2s
++++ b/plasTeX/Renderers/HTML5/Index.jinja2s
+@@ -35,7 +35,7 @@ name: theindex printindex
+ {% endif %}
+ 
+ name: index
+-<a name="{{ obj.id }}" id="{{ obj.id}}"></a>
++{#<a name="{{ obj.id }}" id="{{ obj.id}}"></a>#}
+ 
+ name: see seealso
+ <i>{{ obj.captionName }}</i>{{ obj }}

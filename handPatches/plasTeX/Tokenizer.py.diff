@@ -1,0 +1,30 @@
+--- a/plasTeX/Tokenizer.py	2024-03-05 10:49:09.219026850 +0000
++++ b/plasTeX/Tokenizer.py	2024-03-05 10:50:59.665386256 +0000
+@@ -30,6 +30,9 @@
+ 
+ CatCode = NewType('CatCode', int)
+ 
++class EndInput(Exception):
++    pass
++
+ class Token(Text):
+     """ Base class for all TeX tokens """
+ 
+@@ -268,6 +271,7 @@
+ 
+             if token == '\n':
+                 self.lineNumber += 1
++                self.context.meta["lines"] += 1
+ 
+             code = whichCode(token)
+ 
+@@ -371,7 +375,7 @@
+             try:
+                 (code, char) = next(charIter)
+             except StopIteration:
+-                return
++                raise EndInput
+ 
+             # Short circuit letters and other since they are so common
+             if code in (CC_LETTER, CC_OTHER):
+

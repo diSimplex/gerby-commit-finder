@@ -1,0 +1,27 @@
+--- a/plasTeX/Base/LaTeX/Math.py	2024-03-05 10:18:02.987162018 +0000
++++ b/plasTeX/Base/LaTeX/Math.py	2024-03-05 10:26:16.373701079 +0000
+@@ -159,10 +162,14 @@
+             return res
+
+     class ArrayCell(Array.ArrayCell):
++        doCharSubs = False
+         @property
+         def source(self):
+             return '$\\displaystyle %s $' % sourceChildren(self, par=False)
+
++    class ArrayRow(Array.ArrayRow):
++        doCharSubs = False
++
+ class eqnarray(EqnarrayStar):
+     macroName = None
+     counter = 'equation'
+
+@@ -248,6 +255,7 @@
+ #
+
+ class MathSymbol(Command):
++    doCharSubs = False
+     pass
+
+ # Lowercase
+

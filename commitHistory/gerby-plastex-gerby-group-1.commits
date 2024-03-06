@@ -1,0 +1,32 @@
+0f1f235 Fixes #5
+67f98b3 Fixes #2
+1e0f757 Temporarily fixing Jacob's multi-file indexing
+42caca0 Changed theorem template
+a9c66f6 Reordered some lines
+aa226d2 Small output changes
+4b85205 Fixed silly template issue
+3d43dfb Implement history environment
+3a87e34 Handling slogans
+5576ddd Using file extensions for output
+bb3f774 Improved templates
+2c87cf8 Less clutter files by setting split-level option
+103b7f4 Adding slogan environment
+abc268d Make \cite handling more stupid
+5a3ec72 Code cleanup and \ref in proof caption matching
+b169a6f No file extensions for proofs
+b696355 Moved tags to userdata
+7f7fa2b Implemented output propagation
+992f502 Made searchTheorem a static method
+b76327e Partial statement finder for proofs
+947783d Fixed filename generator
+1339535 Implemented the marginnote package
+39c8750 Use plasTeX's output routine to generate files
+de294e9 Started a Gerby configuration file
+639c295 Copying and modifying the bare essentials of HTML5
+7c2afa3 Merge branch 'gerby' of github.com:pbelmans/plastex into gerby
+1c89a29 Merge pull request #1 from PatrickMassot/gerby
+9b06d06 Detects tags at Renderable.__str__ level
+7033c96 Started linking labels and tags in the DOM tree
+9d18e4b Small improvements to HTML output in Gerby
+d26b0c0 Fixing the blockType of theorems and proofs
+aece903 Started implementing the Gerby renderer

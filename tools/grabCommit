@@ -1,0 +1,104 @@
+#!/usr/bin/env python
+
+# This python script walks through a list of commits (`git log --oneline`)
+# and creates a directory for each commit, each such directory contains
+# the original commit diff (`git diff <commitID>`) as well as the list of
+# effected files (`git diff --names-only <commitID`).
+
+import datetime
+import os
+import subprocess
+import yaml
+
+commitLists = [
+	"commitHistory/gerby-plastex-gerby-group-1.commits",
+	"commitHistory/gerby-plastex-gerby-group-2.commits",
+	"commitHistory/gerby-plastex-gerby-group-3.commits"
+]
+
+gerbyPlastexDir = '../external/gerby-plastex'
+commitsDir = 'commits'
+filesDir   = 'filesChanged'
+
+print(f"Getting the commit info...")
+commitInfo = {}
+baseDir = os.getcwd()
+for aCommitList in commitLists :
+  print("----------------------------------------------------------------")
+  print(f"Working on: {aCommitList}")
+  os.chdir(baseDir)
+  with open(aCommitList) as commitFile :
+    os.chdir(gerbyPlastexDir)
+    for aLine in commitFile :
+      commitFields = aLine.split()
+      commitID = commitFields.pop(0)
+      if commitID not in commitInfo :
+        commitInfo[commitID] = {
+          'id' : commitID,
+          'commits' : {}
+        }
+      #commitInfo[commitID]['id'] = commitID
+      title = " ".join(commitFields)
+      commitInfo[commitID]['title'] = title
+      commitDate = subprocess.check_output(
+        f"git show {commitID} | grep Date",
+        shell=True, text=True
+      )
+      commitDate = commitDate.lstrip('Date:').strip()
+      commitDate = datetime.datetime.strptime(
+        commitDate,
+      	"%a %b %d %H:%M:%S %Y %z"
+      )
+      computerCommitDate = datetime.datetime.strftime(
+        commitDate,
+        "%Y_%m_%d-%H_%M_%S"
+      )
+      commitDir = f"{computerCommitDate}-{commitID}"
+      commitInfo[commitID]['dir'] = commitDir
+      humanCommitDate = datetime.datetime.strftime(
+        commitDate,
+        "%Y/%m/%d %H:%M:%S"
+      )
+      commitInfo[commitID]['date'] = humanCommitDate
+      # see: https://stackoverflow.com/a/17563740
+      commitDiff = subprocess.check_output(
+      	["git", "diff", commitID+'~', commitID]
+      ).decode('utf-8').splitlines()
+
+      curFileName = None
+      curFileLines = []
+      for aLine in commitDiff :
+        if aLine.startswith('diff --git a/') :
+          if curFileName :
+            commitInfo[commitID]['commits'][curFileName] = curFileLines
+          curFileLines = [ aLine ]
+          curFileName  = aLine.lstrip('diff --git a/').split()[0]
+          continue
+        curFileLines.append(aLine)
+      if curFileName :
+        commitInfo[commitID]['commits'][curFileName] = curFileLines
+
+print(f"Saving the commit info...")
+os.chdir(baseDir)
+#print(yaml.dump(commitInfo))
+for aCommitID, someCommitInfo in commitInfo.items() :
+  commitDir = os.path.join(commitsDir, someCommitInfo['dir'])
+  os.makedirs(commitDir, exist_ok=True)
+  with open(os.path.join(commitDir, 'Readme.md'), 'w') as rF :
+    rF.write(f"# {aCommitID} : {someCommitInfo['title']}\n")
+    rF.write("\n")
+    rF.write(f"Commited on: {someCommitInfo['date']}\n")
+    rF.write("\n")
+
+  for aFileName, aFileDiffLines in someCommitInfo['commits'].items() :
+    diffFile = os.path.join(commitDir, aFileName+'.diff')
+    os.makedirs(os.path.dirname(diffFile), exist_ok=True)
+    with open(diffFile, 'w') as dF :
+      dF.write("\n".join(aFileDiffLines))
+      dF.write("\n")
+
+    diffFile = os.path.join(filesDir, aFileName, someCommitInfo['dir']+'.diff')
+    os.makedirs(os.path.dirname(diffFile), exist_ok=True)
+    with open(diffFile, 'w') as dF :
+      dF.write("\n".join(aFileDiffLines))
+      dF.write("\n")

@@ -1,0 +1,237 @@
+##########################################################################
+# Changes to the base which needed handPatches created
+
+filesChanged/.gitignore:
+  details: |
+    Patch SHOULD NOT BE APPLIED
+    This file should not be modified by Gerby
+
+filesChanged/README:
+  details: |
+    Patch SHOULD NOT BE APPLIED
+    This file should not be modified by Gerby
+
+filesChanged/setup.py:
+  details: |
+    Patch SHOULD NOT BE APPLIED
+    This file should not be modified by Gerby
+
+filesChanged/plasTeX/Context.py:
+  details: |
+    Patch succeeds
+  patchOK:
+
+filesChanged/plasTeX/DOM/__init__.py:
+  details: |
+    Patch needs to be applied by hand
+    Gerby-PlasTeX and PlasTeX have diverged
+  patch: handPatches/plasTeX/DOM/__init__.py.diff
+
+filesChanged/plasTeX/Base/TeX/Macros.py:
+  details: |
+    Patch succeeds
+  patchOK:
+
+filesChanged/plasTeX/Base/TeX/__init__.py:
+  details: |
+    Patch needs to be applied by hand
+    Gerby-PlasTeX and PlasTeX have diverged
+  patch: handPatches/plasTeX/Base/TeX/__init__.py.diff
+
+filesChanged/plasTeX/Base/LaTeX/Verbatim.py:
+  details: |
+    Patch is no longer relevant
+    PlasTeX has a new VerbatimEnvironment which is inturn based upon the
+      NoCharSubEnvironment.
+    The Gerby-PlasTeX's patch's intent was to turn off CharSub.
+    This is what PlasTeX has done.
+    This NEEDS TESTING
+
+filesChanged/plasTeX/Base/LaTeX/Arrays.py:
+  details: |
+    Patch (hunk#3) needs to be applied by hand
+    Gerby-PlasTeX and PlasTeX have diverged
+
+    patching file plasTeX/Base/LaTeX/Arrays.py
+    Hunk #1 succeeded at 18 (offset -1 lines).
+    Hunk #2 succeeded at 35 (offset -1 lines).
+    Hunk #3 FAILED at 92.
+    1 out of 3 hunks FAILED -- saving rejects to file plasTeX/Base/LaTeX/Arrays.py.rej
+  patch: handPatches/plasTeX/Base/LaTeX/Arrays.py.diff
+
+filesChanged/plasTeX/Base/LaTeX/Accents.py:
+  details: |
+    Patch (hunk#1) needs to be applied by hand
+    Gerby-PlasTeX and PlasTeX have diverged
+
+    patching file plasTeX/Base/LaTeX/Accents.py
+    Hunk #1 FAILED at 21.
+    1 out of 1 hunk FAILED -- saving rejects to file plasTeX/Base/LaTeX/Accents.py.rej
+  patch: handPatches/plasTeX/Base/LaTeX/Accents.py.diff
+
+filesChanged/plasTeX/Base/LaTeX/Definitions.py:
+  details: |
+    Patches essentially already applied in PlasTeX
+    Gerby-PlasTeX and PlasTeX have diverged
+
+filesChanged/plasTeX/Base/LaTeX/Quotations.py:
+  details: |
+    Patches changed text which did not need to be changed.
+    IS this patch needed?
+  patch: handPatches/plasTeX/Base/LaTeX/Quotations.py.diff
+
+filesChanged/plasTeX/Base/LaTeX/Index.py:
+  details: |
+    Most of these patches unwind themselves....
+    HOWEVER the effect of these patches is to comment out the textContent
+    invoke function
+    IS THIS REALLY NEEDED/WANTED?
+  patch: handPatches/plasTeX/Base/LaTeX/Index.py.diff
+
+filesChanged/plasTeX/Base/LaTeX/Math.py:
+  details: |
+    Most of these patches turn off charsubs.
+    The most recent PlasTeX uses the NoCharSubsEnvironment instead
+  patch: handPatches/plasTeX/Base/LaTeX/Math.py.diff
+
+filesChanged/plasTeX/TeX.py:
+  details: |
+    Added EndInput but other changes already done by PlasTeX
+  patch: handPatches/plasTeX/TeX.py.diff
+
+filesChanged/plasTeX/Tokenizer.py:
+  details: |
+    Added EndInput (exception) as well as adding context.meta["lines"]
+  patch: handPatches/plasTeX/Tokenizer.py.diff
+
+filesChanged/plasTeX/__init__.py:
+  details: |
+    Added NoCharSubCommand (to mirror the NoCharSubEnvironment)
+    Added modifier command to (locally) turn off charSub
+    PlasTeX has radically changed code the "TheCounter::Invoke" (line 1684) see 2017_10_08-09_20_16-9f7bb50
+    Check 2018_02_05-14_36_49-a0abec7
+    For some reason NoCharSubEnvironment has been duplicated at lines 950 and 1042
+    2018_02_20-15_33_38-b65433a.diff unwound the duplicates
+  patch: handPatches/plasTeX/__init__.py.diff
+
+filesChanged/plasTeX/plastex:
+  details: |
+    plastex has been renamed client and various of the code moved elsewhere
+    `run` has been moved to `Compile.py`
+    2018_05_05-01_04_54-2bb10f0 adds a check for empty output directory
+      unfortunately this check seriously changes the command line "interface"
+      so we have ignored this patch
+    2018_05_05-16_02_43-9c510b6 makes a very minor change to the log info
+      so we have ignored this patch
+
+filesChanged/plasTeX/ConfigManager/Generic.py:
+  details: |
+    PlasTeX has removed the ConfigManager/Generic.py
+    This has been replaced by a ConfigManager.py
+    There is NO use of the collections.Callable
+
+##########################################################################
+# changes to the "base" Packages
+
+filesChanged/unittests/Packages/Amsmath.py:
+  details: |
+    Patch contents already exist in PlasTeX
+    (verified by visual inspection)
+
+filesChanged/plasTeX/Packages/hyperref.py:
+  details: |
+    2018_05_05-01_39_57-b781272 already fixed in PlasTeX
+    2018_07_30-15_36_55-c576c7d already fixed in PlasTeX
+
+filesChanged/plasTeX/Packages/xy.py:
+  details: |
+    2017_08_08-16_58_36-0f1f235 already fixed in PlasTeX
+    2017_08_11-14_52_42-992df1b already fixed in PlasTeX
+    2017_09_10-00_17_40-8498571 adds NoCharSubCommand... not done in PlasTeX
+    2017_09_29-23_42_13-6a8f182 already fixed in PlasTeX
+    2017_09_30-00_01_42-a24e7c0 already fixed in PlasTeX
+    2017_10_01-09_58_34-771dd0a update of 2017_09_29-23_42_13-6a8f182?
+    2018_02_12-14_49_11-df5178c already fixed in PlasTeX
+    2018_02_15-14_31_46-e306640 already fixed in PlasTeX
+    2018_02_20-15_33_38-b65433a reversed 2017_09_10-00_17_40-8498571
+    2018_05_05-00_05_42-8f2a8d5 already fixed in PlasTeX
+    2018_05_15-09_46_46-09d27bb already fixed in PlasTeX
+
+filesChanged/plasTeX/Packages/amsmath.py:
+  details: |
+    2017_08_14-19_56_42-a18adda already fixed in PlasTeX
+    2019_11_30-15_19_23-2c34245 already fixed in PlasTeX
+
+filesChanged/plasTeX/Packages/tikz-cd.py:
+  details: |
+    PlasTeX and Gerby-PlasTeX have a very different implementation.
+    At the moment we will favour PlasTeX's implementation....
+
+filesChanged/plasTeX/Packages/article.py:
+  details: |
+    2023_11_17-14_47_12-11182c5 already fixed in PlasTeX
+
+filesChanged/plasTeX/Packages/marginnote.py:
+  details: |
+    2017_07_19-14_41_04-1339535 already fixed in PlasTeX
+
+filesChanged/plasTeX/Packages/tikz.py:
+  details: |
+    PlasTeX and Gerby-PlasTeX have a very different implementation.
+    At the moment we will favour PlasTeX's implementation....
+
+filesChanged/plasTeX/Packages/report.py:
+  details: |
+    2023_11_17-14_47_12-11182c5 already fixed in PlasTeX
+
+filesChanged/plasTeX/Packages/book.py:
+  details: |
+    2018_01_03-13_40_40-9f67ca3 already fixed in PlasTeX
+    2018_08_07-15_51_32-d657a30 not applied but maybe should be...
+       ... need to check book.py in recent TeXLive
+    2018_10_24-09_50_56-5503a35 reverses 2018_08_07-15_51_32-d657a30
+
+filesChanged/plasTeX/Packages/debugplastex.py:
+  details: |
+    2017_08_14-19_56_42-a18adda already fixed in PlasTeX
+
+##########################################################################
+# changes to "base" Renderers
+
+filesChanged/plasTeX/Renderers/Stacks.jinja2s:
+  details: |
+    Not in PlasTeX
+    Should this be in Plugin?
+
+filesChanged/plasTeX/Renderers/HTML5/Config.py:
+  details: |
+    2019_12_21-11_45_20-b714990 adds 'tikz' command line options
+      this patch is old style
+      should it even be in the HTML5 renderer?
+      can this be done in a plugin?
+
+filesChanged/plasTeX/Renderers/HTML5/tikzpicture.jinja2:
+  details: |
+    2019_12_21-11_45_20-b714990 already implemented (differently) in PlasTeX
+
+filesChanged/plasTeX/Renderers/HTML5/Index.jinja2s:
+  details: |
+    2017_07_25-20_34_46-aa226d2 comments out the 'index' template action
+      should this be done?
+      can this be done in a plugin?
+
+filesChanged/plasTeX/Renderers/HTML5/Lists.jinja2s:
+  details: |
+    2017_07_18-20_08_55-9d18e4b adds comment to coders
+      is this needed here?
+    2023_10_09-16_45_53-1054137 reverses 2017_07_18-20_08_55-9d18e4b
+
+filesChanged/plasTeX/Renderers/HTML5/tikzcd.jinja2:
+  details: |
+    2019_12_21-11_45_20-b714990 already implemented (differently) in PlasTeX
+
+filesChanged/plasTeX/Renderers/__init__.py:
+  details: |
+    2017_07_20-09_23_32-7f7fa2b is a REQUIRED change for Gerby
+      can this be done in a plugin?
+  patchOK:

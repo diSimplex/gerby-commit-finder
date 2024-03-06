@@ -1,0 +1,7 @@
+diff --git a/plasTeX/Renderers/Stacks.jinja2s b/plasTeX/Renderers/Stacks.jinja2s
+new file mode 100644
+index 0000000..d3f4fff
+--- /dev/null
++++ b/plasTeX/Renderers/Stacks.jinja2s
+@@ -0,0 +1 @@
++name: slogan

@@ -1,0 +1,9 @@
+diff --git a/plasTeX/Base/TeX/__init__.py b/plasTeX/Base/TeX/__init__.py
+index a89d3fc..fa33fc7 100644
+--- a/plasTeX/Base/TeX/__init__.py
++++ b/plasTeX/Base/TeX/__init__.py
+@@ -5,3 +5,4 @@ from plasTeX.Base.TeX.Parameters import *
+ from plasTeX.Base.TeX.Primitives import *
+ from plasTeX.Base.TeX.Registers import *
+ from plasTeX.Base.TeX.Text import *
++from plasTeX.Base.TeX.Macros import *

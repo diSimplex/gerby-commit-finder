@@ -1,0 +1,8 @@
+diff --git a/plasTeX/Renderers/Gerby/Bibliography.jinja2s b/plasTeX/Renderers/Gerby/Bibliography.jinja2s
+index 79504dc..e5f703d 100644
+--- a/plasTeX/Renderers/Gerby/Bibliography.jinja2s
++++ b/plasTeX/Renderers/Gerby/Bibliography.jinja2s
+@@ -1,2 +1,2 @@
+ name: cite
+-<span class="cite">[{% for item in obj.attributes['bibkeys'] %}<a href="/bibliography/{{ item }}">{{ item }}</a>{% endfor %}]</span>
++<span class="cite">[{% if obj.postnote %}{{ obj.postnote }}, {% endif %}{% for item in obj.attributes['bibkeys'] %}<a href="/bibliography/{{ item }}">{{ item }}</a>{% endfor %}]</span>

@@ -1,0 +1,20 @@
+diff --git a/plasTeX/Renderers/Gerby/Bibliography.jinja2s b/plasTeX/Renderers/Gerby/Bibliography.jinja2s
+new file mode 100644
+index 0000000..b4c52bf
+--- /dev/null
++++ b/plasTeX/Renderers/Gerby/Bibliography.jinja2s
+@@ -0,0 +1,14 @@
++name: cite
++<span class="cite">
++[
++{# TODO this needs attention: plasTeX needs to be aware of the BibTeX for it to work? #}
++{% for item in obj.citation() %}
++  {% if item.idref and item.idref.bibitem.url %}
++    <cite><a href="{{ item.idref.bibitem.url }}">{{ item }}</a></cite>
++  {% else %}
++    {{ item }}
++  {% endif %}
++{% endfor %}
++]
++</span>
++

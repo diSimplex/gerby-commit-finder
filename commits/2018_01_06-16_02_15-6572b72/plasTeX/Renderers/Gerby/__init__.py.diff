@@ -1,0 +1,13 @@
+diff --git a/plasTeX/Renderers/Gerby/__init__.py b/plasTeX/Renderers/Gerby/__init__.py
+index 5dc0e70..4cd2d41 100644
+--- a/plasTeX/Renderers/Gerby/__init__.py
++++ b/plasTeX/Renderers/Gerby/__init__.py
+@@ -126,7 +126,7 @@ def linearRepresentation(document):
+   while len(stack) > 0:
+     node = stack.pop()
+ 
+-    if node.nodeName in ["thmenv", "proof", "slogan"]:
++    if node.nodeName in ["thmenv", "proof", "reference", "history", "slogan"]:
+       document.userdata["linear"].append(node)
+ 
+     stack.extend(node.childNodes)

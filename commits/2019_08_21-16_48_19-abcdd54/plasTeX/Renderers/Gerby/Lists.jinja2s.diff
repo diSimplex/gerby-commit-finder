@@ -1,0 +1,13 @@
+diff --git a/plasTeX/Renderers/Gerby/Lists.jinja2s b/plasTeX/Renderers/Gerby/Lists.jinja2s
+index 2b244a1..e0466c1 100644
+--- a/plasTeX/Renderers/Gerby/Lists.jinja2s
++++ b/plasTeX/Renderers/Gerby/Lists.jinja2s
+@@ -21,7 +21,7 @@ name: item
+ {%- if obj.attributes['term'] or obj.userdata['tag'] %}
+  class="custom-item"
+   {%- if obj.attributes['term'] %}
+- data-marker="{{- obj.attributes['term'] -}}"
++ data-marker="{{- obj.attributes['term'] | striptags -}}"
+   {%- endif -%}
+   {%- if obj.userdata['tag'] %}
+  id="{{- obj.userdata['tag'] -}}"

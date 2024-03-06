@@ -1,0 +1,10 @@
+diff --git a/plasTeX/Renderers/Gerby/Misc.jinja2s b/plasTeX/Renderers/Gerby/Misc.jinja2s
+index c12ab52..5d0d272 100644
+--- a/plasTeX/Renderers/Gerby/Misc.jinja2s
++++ b/plasTeX/Renderers/Gerby/Misc.jinja2s
+@@ -12,4 +12,4 @@ name: tableofcontents input @vobeyspaces @noligs def protect let \
+       vskip pagestyle centerline hyperref marginnote normalmarginpar
+ 
+ name: texorpdfstring
+-{{ obj.argSource[1:-1].split("}{")[0] }}
++{{ obj.argSources['tex'][1:-1] }}

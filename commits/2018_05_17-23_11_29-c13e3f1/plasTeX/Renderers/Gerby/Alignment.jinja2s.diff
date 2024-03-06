@@ -1,0 +1,17 @@
+diff --git a/plasTeX/Renderers/Gerby/Alignment.jinja2s b/plasTeX/Renderers/Gerby/Alignment.jinja2s
+new file mode 100644
+index 0000000..0326810
+--- /dev/null
++++ b/plasTeX/Renderers/Gerby/Alignment.jinja2s
+@@ -0,0 +1,11 @@
++name: center centering centerline
++<div class="centered">{{ obj }}</div>
++
++name: flushleft raggedright leftline
++<div class="flushleft">{{ obj }}</div>
++
++name: raggedleft flushright llap
++<div class="flushright">{{ obj }}</div>
++
++name: raggedbottom
++<div class="raggedbottom">{{ obj }}</div>

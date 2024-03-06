@@ -1,0 +1,16 @@
+diff --git a/plasTeX/Packages/xy.py b/plasTeX/Packages/xy.py
+index f1347a9..2c1d6de 100644
+--- a/plasTeX/Packages/xy.py
++++ b/plasTeX/Packages/xy.py
+@@ -9,6 +9,11 @@ class xymatrix(NoCharSubCommand):
+     """ End of a row """
+     macroName = '\\'
+ 
++  class CellDelimiter(Command):
++    """ Cell delimiter """
++    macroName = 'active::&'
++    pass
++
+   class ar(Command):
+     pass
+ 

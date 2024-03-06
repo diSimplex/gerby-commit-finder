@@ -1,0 +1,20 @@
+diff --git a/plasTeX/Base/LaTeX/Index.py b/plasTeX/Base/LaTeX/Index.py
+index 7e779c7..5a02b5c 100644
+--- a/plasTeX/Base/LaTeX/Index.py
++++ b/plasTeX/Base/LaTeX/Index.py
+@@ -279,6 +279,7 @@ class index(Command):
+     def textContent(self):
+         return ''
+ 
++"""
+     def invoke(self, tex):
+         result = Command.invoke(self, tex)
+         sortkey, key, format = [], [], []
+@@ -355,6 +356,7 @@ class index(Command):
+         userdata['index'].append(IndexEntry(key, self, sortkey, format, type))
+ 
+         return result
++"""
+ 
+ 
+ 

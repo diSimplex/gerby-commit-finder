@@ -1,0 +1,26 @@
+--- a/plasTeX/Base/LaTeX/Quotations.py	2024-03-05 09:41:57.512845796 +0000
++++ b/plasTeX/Base/LaTeX/Quotations.py	2024-03-05 09:41:57.748850836 +0000
+@@ -6,7 +6,7 @@
+ from plasTeX import Environment
+ 
+ 
+-class quote(Environment): 
++class quote(Environment):
+     blockType = True
+ 
+ class quotation(Environment):
+@@ -14,3 +14,13 @@
+ 
+ class verse(Environment):
+     blockType = True
++
++# TODO figure out why putting this in plasTeX.Renderers.Gerby causes things to malfunction
++class slogan(Environment):
++  blockType = True
++
++class history(Environment):
++  blockType = True
++
++class reference(Environment):
++  blockType = True
+

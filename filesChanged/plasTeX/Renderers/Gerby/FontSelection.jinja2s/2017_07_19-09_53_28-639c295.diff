@@ -1,0 +1,8 @@
+diff --git a/plasTeX/Renderers/Gerby/FontSelection.jinja2s b/plasTeX/Renderers/Gerby/FontSelection.jinja2s
+new file mode 100644
+index 0000000..9840bb5
+--- /dev/null
++++ b/plasTeX/Renderers/Gerby/FontSelection.jinja2s
+@@ -0,0 +1,2 @@
++name: it
++<em>{{ obj }}</em>

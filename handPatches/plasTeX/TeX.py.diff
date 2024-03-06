@@ -1,0 +1,21 @@
+--- a/plasTeX/TeX.py	2024-03-05 10:43:15.739475667 +0000
++++ b/plasTeX/TeX.py	2024-03-05 10:48:12.061805843 +0000
+@@ -16,7 +16,7 @@
+ from io import IOBase
+ from typing import Optional, List
+ import string, os, sys, plasTeX, subprocess
+-from plasTeX.Tokenizer import Tokenizer, Token, EscapeSequence, Other
++from plasTeX.Tokenizer import Tokenizer, Token, EscapeSequence, Other, EndInput
+ from plasTeX import TeXDocument
+ from plasTeX.Base.TeX.Primitives import MathShift
+ from plasTeX import ParameterCommand, Macro
+@@ -271,7 +271,7 @@
+                     t.parentNode = None
+                     yield t
+ 
+-            except StopIteration:
++            except (EndInput, StopIteration):
+                 endInput()
+ 
+             # This really shouldn't happen, but just in case...
+

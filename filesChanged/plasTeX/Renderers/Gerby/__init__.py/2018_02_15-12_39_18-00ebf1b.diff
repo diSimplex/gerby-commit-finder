@@ -1,0 +1,13 @@
+diff --git a/plasTeX/Renderers/Gerby/__init__.py b/plasTeX/Renderers/Gerby/__init__.py
+index 8697ad5..0eea6ed 100644
+--- a/plasTeX/Renderers/Gerby/__init__.py
++++ b/plasTeX/Renderers/Gerby/__init__.py
+@@ -149,7 +149,7 @@ def linearRepresentation(document):
+ 
+     stack.extend(node.childNodes)
+ 
+-  document.userdata["linear"] = list(reversed(document.userdata["linear"])) # TODO figure out why this is necessary
++  document.userdata["linear"] = list(reversed(document.userdata["linear"]))
+ 
+ def partsList(document):
+   """Make an association between parts and chapters"""

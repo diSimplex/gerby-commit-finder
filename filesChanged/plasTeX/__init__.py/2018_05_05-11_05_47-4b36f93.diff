@@ -1,0 +1,20 @@
+diff --git a/plasTeX/__init__.py b/plasTeX/__init__.py
+index 9d4760b..06736b8 100644
+--- a/plasTeX/__init__.py
++++ b/plasTeX/__init__.py
+@@ -462,6 +462,7 @@ class Macro(Element):
+             return
+ 
+         self.argSource = ''
++        self.argSources = {}
+         arg = None
+         try:
+             for arg in self.arguments:
+@@ -469,6 +470,7 @@ class Macro(Element):
+                 output, source = tex.readArgumentAndSource(parentNode=self,
+                                                            name=arg.name,
+                                                            **arg.options)
++                self.argSources[arg.name] = source
+                 self.argSource += source
+                 self.attributes[arg.name] = output
+                 self.postArgument(arg, output, tex)

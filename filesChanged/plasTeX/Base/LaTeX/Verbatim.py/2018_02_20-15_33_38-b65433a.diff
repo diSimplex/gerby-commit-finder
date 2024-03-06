@@ -1,0 +1,32 @@
+diff --git a/plasTeX/Base/LaTeX/Verbatim.py b/plasTeX/Base/LaTeX/Verbatim.py
+index 27f60e4..0e35230 100644
+--- a/plasTeX/Base/LaTeX/Verbatim.py
++++ b/plasTeX/Base/LaTeX/Verbatim.py
+@@ -5,13 +5,14 @@ C.6.4 Verbatim
+ 
+ """
+ 
+-from plasTeX import Macro, Environment, NoCharSubEnvironment, Command, sourceArguments, sourceChildren
++from plasTeX import Macro, Environment, Command, sourceArguments, sourceChildren
+ from plasTeX.Base.TeX.Text import bgroup, egroup
+ from plasTeX.Tokenizer import Other
+ 
+-class verbatim(NoCharSubEnvironment):
++class verbatim(Environment):
+     blockType = True
+     captionable = True
++    doCharSubs = False
+ 
+     def invoke(self, tex):
+         """ Parse until we reach `\end{verbatim}' or `\endverbatim' """
+@@ -76,10 +77,6 @@ class verbatim(NoCharSubEnvironment):
+ 
+         return tokens
+ 
+-    def normalize(self, charsubs=None):
+-        """ Normalize, but don't allow character substitutions """
+-        return Environment.normalize(self)
+-
+ class endverbatim(verbatim):
+     def invoke(self, tex):
+         end = self.ownerDocument.createElement(self.nodeName[3:])

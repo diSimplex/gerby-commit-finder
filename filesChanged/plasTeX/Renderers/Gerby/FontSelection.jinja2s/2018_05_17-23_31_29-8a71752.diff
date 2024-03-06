@@ -1,0 +1,11 @@
+diff --git a/plasTeX/Renderers/Gerby/FontSelection.jinja2s b/plasTeX/Renderers/Gerby/FontSelection.jinja2s
+index 1782ae1..0a02dea 100644
+--- a/plasTeX/Renderers/Gerby/FontSelection.jinja2s
++++ b/plasTeX/Renderers/Gerby/FontSelection.jinja2s
+@@ -3,3 +3,6 @@ name: bf bfseries textbf
+ 
+ name: it itseries textit
+ <em>{{ obj }}</em>
++
++name: large
++<big>{{ obj }}</big>

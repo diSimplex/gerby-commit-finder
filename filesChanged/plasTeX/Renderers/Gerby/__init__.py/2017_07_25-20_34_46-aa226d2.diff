@@ -1,0 +1,15 @@
+diff --git a/plasTeX/Renderers/Gerby/__init__.py b/plasTeX/Renderers/Gerby/__init__.py
+index 69d2a95..7c5c84c 100644
+--- a/plasTeX/Renderers/Gerby/__init__.py
++++ b/plasTeX/Renderers/Gerby/__init__.py
+@@ -90,6 +90,10 @@ def decorateTags(node, labels):
+     node.userdata["propagate"] = True
+ 
+   for child in node.childNodes:
++    # make sure that there is always a paragraph in a proof
++    if not all([child.nodeName == "par" for child in node.childNodes]):
++      node.paragraphs()
++
+     decorateTags(child, labels)
+ 
+ def loadTags(document):

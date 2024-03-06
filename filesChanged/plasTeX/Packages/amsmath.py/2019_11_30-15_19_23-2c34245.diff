@@ -1,0 +1,14 @@
+diff --git a/plasTeX/Packages/amsmath.py b/plasTeX/Packages/amsmath.py
+index eeaafc9..9a06b4e 100644
+--- a/plasTeX/Packages/amsmath.py
++++ b/plasTeX/Packages/amsmath.py
+@@ -60,6 +60,9 @@ class EquationStar(_AMSEquationStar):
+ class aligned(_AMSEquation):
+     pass
+ 
++class gathered(MathEnvironmentPre):
++    pass
++
+ class cases(_AMSEquation):
+     pass
+ 

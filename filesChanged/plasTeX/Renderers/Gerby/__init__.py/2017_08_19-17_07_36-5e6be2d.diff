@@ -1,0 +1,27 @@
+diff --git a/plasTeX/Renderers/Gerby/__init__.py b/plasTeX/Renderers/Gerby/__init__.py
+index 4b2181d..9bfeb37 100644
+--- a/plasTeX/Renderers/Gerby/__init__.py
++++ b/plasTeX/Renderers/Gerby/__init__.py
+@@ -12,7 +12,7 @@ How to test this (for now):
+ import os, re
+ import plasTeX
+ from plasTeX.Renderers.PageTemplate import Renderer as _Renderer
+-from plasTeX.Renderers import Renderable
++from plasTeX.Renderers import Renderable, mixin, unmix
+ from plasTeX.DOM import Node
+ 
+ log = plasTeX.Logging.getLogger()
+@@ -184,4 +184,13 @@ class Gerby(_Renderer):
+ 
+     _Renderer.render(self, document)
+ 
++    # write footnotes
++    mixin(Node, Gerby.renderableClass)
++    Node.renderer = self
++    for footnote in document.userdata["footnotes"]:
++      with open("{0}.footnote".format(footnote.id),"w") as f:
++        f.write(str(footnote))
++    del Node.renderer
++    unmix(Node, Gerby.renderableClass)
++
+ Renderer = Gerby

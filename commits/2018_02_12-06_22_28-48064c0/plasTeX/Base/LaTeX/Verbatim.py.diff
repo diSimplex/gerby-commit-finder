@@ -1,0 +1,18 @@
+diff --git a/plasTeX/Base/LaTeX/Verbatim.py b/plasTeX/Base/LaTeX/Verbatim.py
+index dbdbaad..27f60e4 100644
+--- a/plasTeX/Base/LaTeX/Verbatim.py
++++ b/plasTeX/Base/LaTeX/Verbatim.py
+@@ -5,11 +5,11 @@ C.6.4 Verbatim
+ 
+ """
+ 
+-from plasTeX import Macro, Environment, Command, sourceArguments, sourceChildren
++from plasTeX import Macro, Environment, NoCharSubEnvironment, Command, sourceArguments, sourceChildren
+ from plasTeX.Base.TeX.Text import bgroup, egroup
+ from plasTeX.Tokenizer import Other
+ 
+-class verbatim(Environment):
++class verbatim(NoCharSubEnvironment):
+     blockType = True
+     captionable = True
+ 

@@ -1,0 +1,15 @@
+diff --git a/plasTeX/Renderers/__init__.py b/plasTeX/Renderers/__init__.py
+index 8c85811..552a91b 100644
+--- a/plasTeX/Renderers/__init__.py
++++ b/plasTeX/Renderers/__init__.py
+@@ -206,7 +206,9 @@ class Renderable(object):
+ 
+                 status.info(' ] ')
+ 
+-                continue
++                # only continue when it is not supposed to propagate to output higher up
++                if "propagate" not in child.userdata or not child.userdata["propagate"]:
++                  continue
+ 
+             # Append the resultant object to the output
+             s.append(val)

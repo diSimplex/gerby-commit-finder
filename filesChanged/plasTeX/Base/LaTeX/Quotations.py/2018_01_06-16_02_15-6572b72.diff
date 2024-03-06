@@ -1,0 +1,11 @@
+diff --git a/plasTeX/Base/LaTeX/Quotations.py b/plasTeX/Base/LaTeX/Quotations.py
+index 70ca649..e073167 100644
+--- a/plasTeX/Base/LaTeX/Quotations.py
++++ b/plasTeX/Base/LaTeX/Quotations.py
+@@ -24,3 +24,6 @@ class slogan(Environment):
+ 
+ class history(Environment):
+   blockType = True
++
++class reference(Environment):
++  blockType = True

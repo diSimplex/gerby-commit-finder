@@ -1,0 +1,15 @@
+diff --git a/plasTeX/Renderers/Gerby/Diagrams.jinja2s b/plasTeX/Renderers/Gerby/Diagrams.jinja2s
+new file mode 100644
+index 0000000..c60a6ae
+--- /dev/null
++++ b/plasTeX/Renderers/Gerby/Diagrams.jinja2s
+@@ -0,0 +1,9 @@
++name: tikzcd
++<tikzcd id="{{ obj.id }}">
++{{ obj.source }}
++</tikzcd>
++
++name: tikzpicture
++<tikzpicture id="{{ obj.id }}">
++{{ obj.source }}
++</tikzpicture>

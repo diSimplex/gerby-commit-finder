@@ -1,0 +1,24 @@
+diff --git a/plasTeX/Base/LaTeX/Math.py b/plasTeX/Base/LaTeX/Math.py
+index e21f0f2..2709224 100644
+--- a/plasTeX/Base/LaTeX/Math.py
++++ b/plasTeX/Base/LaTeX/Math.py
+@@ -148,8 +148,8 @@ class eqnarray(EqnarrayStar):
+             return res
+         res[1].ref = self.ref
+         return res
+-class nonumber(Command):
+ 
++class nonumber(Command):
+     def invoke(self, tex):
+         self.ownerDocument.context.counters['equation'].addtocounter(-1)
+ 
+@@ -632,6 +632,9 @@ class stackrel(MathAccent):
+ class mathrm(Command):
+     args = 'self'
+ 
++class mathop(Command):
++    args = 'self'
++
+ class mathit(Command):
+     args = 'self'
+ 

@@ -1,0 +1,14 @@
+diff --git a/plasTeX/Packages/tikz.py b/plasTeX/Packages/tikz.py
+index b70ff73..9f82e55 100644
+--- a/plasTeX/Packages/tikz.py
++++ b/plasTeX/Packages/tikz.py
+@@ -138,3 +138,9 @@ def ProcessOptions(options, document):
+             key='processFileContents',
+             data=convert)
+     document.addPackageResource(cb)
++
++    cb = PackageResource(
++            renderers='gerby',
++            key='processFileContents',
++            data=convert)
++    document.addPackageResource(cb)

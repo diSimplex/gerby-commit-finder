@@ -1,0 +1,11 @@
+diff --git a/plasTeX/Renderers/Gerby/Misc.jinja2s b/plasTeX/Renderers/Gerby/Misc.jinja2s
+index 6ace6cc..69a6261 100644
+--- a/plasTeX/Renderers/Gerby/Misc.jinja2s
++++ b/plasTeX/Renderers/Gerby/Misc.jinja2s
+@@ -17,3 +17,6 @@ name: texorpdfstring
+ 
+ name: href
+ <a href="{{ obj.argSources['url'][1:-1] }}">{{ obj }}</a>
++
++name: xspace
++&nbsp;

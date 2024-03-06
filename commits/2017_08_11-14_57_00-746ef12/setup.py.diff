@@ -1,0 +1,13 @@
+diff --git a/setup.py b/setup.py
+index 0bec7af..432d11e 100644
+--- a/setup.py
++++ b/setup.py
+@@ -58,7 +58,7 @@ setup(name="plasTeX",
+          'plasTeX.Renderers.S5.Themes.default.ui.default',
+       ],
+       package_data = {
+-         'plasTeX': ['*.xml'],
++         'plasTeX': ['*.xml', 'plasTeXrc'],
+          'plasTeX.Base.LaTeX': ['*.xml','*.txt'],
+          'plasTeX.Renderers.DocBook': templates,
+          'plasTeX.Renderers.DocBook.Themes.default': templates,

@@ -1,0 +1,13 @@
+diff --git a/plasTeX/Packages/hyperref.py b/plasTeX/Packages/hyperref.py
+index b22eebe..b87888e 100644
+--- a/plasTeX/Packages/hyperref.py
++++ b/plasTeX/Packages/hyperref.py
+@@ -107,7 +107,7 @@ class autoref(Command):
+ class pdfstringdef(Command):
+     args = 'macroname:string tex:string'
+ 
+-class textorpdfstring(Command):
++class texorpdfstring(Command):
+     args = 'tex:string pdf:string'
+ 
+ class pdfstringdefDisableCommands(Command):

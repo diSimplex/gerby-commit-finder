@@ -1,0 +1,14 @@
+diff --git a/plasTeX/DOM/__init__.py b/plasTeX/DOM/__init__.py
+index a20f14f..6cf0549 100644
+--- a/plasTeX/DOM/__init__.py
++++ b/plasTeX/DOM/__init__.py
+@@ -1070,6 +1070,9 @@ class Node(object):
+ 
+         """
+         charsubs = charsubs or []
++        if not getattr(self, "doCharSubs", True) or self.ownerDocument.context.isMathMode:
++            charsubs = []
++
+         if self.hasAttributes():
+             for value in list(self.attributes.values()):
+                 if isinstance(value, Node):

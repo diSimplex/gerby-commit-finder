@@ -1,0 +1,13 @@
+diff --git a/plasTeX/Packages/book.py b/plasTeX/Packages/book.py
+index 3961615..007b376 100644
+--- a/plasTeX/Packages/book.py
++++ b/plasTeX/Packages/book.py
+@@ -14,7 +14,7 @@ def ProcessOptions(options, document):
+     # Sections
+     context.newcounter('part', resetby='volume',
+                        format='$part')
+-    context.newcounter('chapter', resetby='part',
++    context.newcounter('chapter', resetby='volume',
+                        format='$chapter')
+     context.newcounter('section', resetby='chapter',
+                        format='${thechapter}.${section}')

@@ -1,0 +1,19 @@
+--- a/plasTeX/Base/LaTeX/Index.py	2024-03-05 10:07:54.822159723 +0000
++++ b/plasTeX/Base/LaTeX/Index.py	2024-03-05 10:16:38.129347819 +0000
+@@ -278,6 +277,7 @@
+     def textContent(self):
+         return ''
+
++"""
+     def invoke(self, tex):
+         result = Command.invoke(self, tex)
+         sortkey, key, format = [], [], []
+@@ -354,6 +354,7 @@
+         userdata['index'].append(IndexEntry(key, self, sortkey, format, type))
+
+         return result
++"""
+
+
+
+

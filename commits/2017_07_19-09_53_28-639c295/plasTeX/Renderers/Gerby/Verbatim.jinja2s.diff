@@ -1,0 +1,11 @@
+diff --git a/plasTeX/Renderers/Gerby/Verbatim.jinja2s b/plasTeX/Renderers/Gerby/Verbatim.jinja2s
+new file mode 100644
+index 0000000..15af007
+--- /dev/null
++++ b/plasTeX/Renderers/Gerby/Verbatim.jinja2s
+@@ -0,0 +1,5 @@
++name: verbatim
++<pre><code>{{ obj }}</code></pre>
++
++name: verb
++<code>{{ obj }}</code>

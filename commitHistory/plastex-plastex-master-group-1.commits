@@ -1,0 +1,480 @@
+4b66cd7 add a unit test for \imath and \jmath
+049d197 imath and jmath are MathSymbols
+0d113a5 amsthm: change \newtheorem to take any TeXFragment as a header
+1937473 Bump version number to 3.1
+f1fe3e5 Improve advice in --debug
+297531f remove unused `renderMethod`
+91394b7 doc: pushToken does not pop from output
+38bf496 Fix footnote support in beamer
+1b41093 Remove coveralls from workflow
+538cb84 Drop leftover debug print
+97eb95b mypy fix.
+aa2f826 Fix many ResourceWarning from test suite (#343)
+b4f39d2 Remove useless files
+a7ed50f Remove empty file that has been around for 20 years.
+06ad1e7 Test also using python 3.12.
+4fef705 Fix parsing of smallmatrix
+78aa899 Fix image comparison process call
+38a3f86 Fix image cache
+182ee95 Remove badges in README since they don't work.
+de37518 Fix type hints
+265b6db Fix amsthm test
+ed5c89d Split-off a Context.loadPythonPackage method
+606e997 Improve templates for theorems and proofs
+0d6fa22 Give direct access to document in Jinja templates
+7b8ddfc Better amsthm fix
+dadcfc3 Temporary revert broken fix
+51c8375 Fix thmenv level to avoid having a theorem nested in a paragraph.
+f4b91c1 Fix xml debug rendering
+8714347 HTML5: renderer: Changes 'equation' content to mathjax_source
+be2ea24 Missing double escape
+298a55b Mark Beamer test as expected to fail.
+d81a9fd Document url argument type.
+8ee67cb Don't normalize url attribute
+84b9294 Allow nodes to define non-normalizable attributes.
+91e5b36 Allow arg types to specify character subsitutions
+dd1a125 Add unit test for issue #342.
+48c0fc8 Fix Imager TEXINPUTS
+a882a62 Fix missing css files
+7292660 Fix beamer argument handling and simplify code
+c10c394 rm print("Yo")
+aa5de5c Update __version__
+514aeda Remove mention of version 3.
+83c9308 Bump version number
+f5ac2c9 Migrate to pyproject.toml + setup.cfg
+9edae66 Update INSTALL file
+506dd29 Simplify README even more
+3ef3433 Switch to entry_points mechanism
+fdadd40 Add plugin documentation
+8c953ac Fix page numbering in imager
+ac03699 Pass TEXINPUTS to imagers
+31d93dc Fix listings argument parsing
+df336f1 Rough implementation of the forest package
+ead1d17 Doc fixes about logging.
+986c71a Allow plugins without a Packages folder
+68bb1eb Better missing file handling in HTML5
+3b74bdc Add getting started guide.
+e75872a Fix pdftoppm verify method
+f2f2f62 Fix Imager choice logic
+89508df Fix \input without extension and without kpsewhich
+f9fd895 Document ensuremath hack
+72146b5 Filter str on logging
+ffa1ec3 Better fix for \big< and its evil friends
+5043eb8 Fix typo in debug help
+6eb8db4 Fix the argv fix
+a62ad4f Correctly pass argv in plasTeX.plastex
+f31ba76 renderers.tex: fix typos
+f3098f4 Fix a few typos.
+5c180be Multi-version fix
+22d5809 Change deprecated pillow name
+79acacd markdown "fix"
+0147af7 Add history to CONTRIBUTING.md
+01a29b2 Add Python 3.10 and 3.11 to GitHub tests
+a8e9969 Minor stylistic changes in README.md.
+82928de documentation: Fix typo in Doc/document.tex
+3de024a More helpful error messages from xcolor
+855c2cd Fix subsitution logic
+4b3290b Add test for error reporting issue #274
+26fd50d bug fix for #274 line numbering inconsistency
+b7dc1b9 Try to fix coverall CI
+039e617 CI also in python 3.10.
+feae5da Remove outdated part of README
+0312076 Tell mypy to ignore code it doesn't understand
+d5144e1 Allow Jinja2>=3.1.0
+806d80c Trivial typo: s/Jain/Join/
+5b89290 Fix documentation typo
+b3bcf6d Fix mathjax issue with \left< and \right>
+b89831f Fix unicode symbols for medium/thick spaces
+a04394f remove extra argument self
+7521d2a minipage has three optional arguments
+8dffc02 Fix some displaymath-style environment.
+3d7d7cb Avoid repeately adding to sys.path
+f4152e7 Allow packages to add items at the end of the toc.
+af16287 mypy fixes
+a04339a Fix mathjax config
+b441bfe Fix AMS aligned numbering
+e562fe1 Some more debugging doc.
+206709a Custom templates loading fix
+4bce4de Improve {{ debug() }}
+567dc07 listing tweaks
+637ed3e Add --debug option for parsed document inspection
+9722285 Better handling of SVG images
+b83f9c1 Doc: fix outdated imager examples
+04ac141 CSS: fix centering for main content and images
+bc50094 CSS: Column flex direction for \centering
+5f5fd97 Add \qed
+ff4a689 unicode-math package stub
+e0c4b55 Add mathjax-macros option
+569c456 Fix cleveref
+ec48296 Fix style
+eed8d46 Revert "Allow renewcommand to overwrite builtin"
+416ff51 Forgotten doc fix
+e75cebb Rename file argument to TeX constructor.
+d49204a Add --extra-templates command line option
+fd5ef42 Add tests for natbib cite sorting
+4ce3bae natbib store options in ownerDocument.userdata
+ceaf2e6 Empty jobname when using TeX.input with str
+68b134f remove unnecessary call to bibitems
+f394353 fix sort in natbib
+48fb06a fix double dollar construction rendering
+c900a94 New mypy flags also in GitHub workflow
+355a35f Use new mypy flags
+94448a2 listings: simplify and lint
+53ddf77 fix listings
+1168357 Fix characters substitutions in eqnarrays
+2e9bdec Fix test after new mathjax settings
+002f331 More spaces tweaks
+a10c1ed Prevent character substitutions in math environments
+b24d383 Switch to mathjax 3 by default in HTML5
+5268d43 Add missing margin in CSS
+4b73235 Revert "Fix parsing of optional argument"
+ef41cdf Don't allow mathjax $ by default
+02610ee Add amsmath eqref
+0e14743 Allow renewcommand to overwrite builtin
+29ff124 Bump py from 1.4.34 to 1.10.0
+6182161 Debug CI
+f23c113 Adds ifdefined and ifcsname
+ce23a53 One more fix to package loading
+0baf128 Fix parsing of optional argument
+616d1ca Add package iftex
+8126b0b Fix XHTML png icons
+0982ba4 Implement xr package
+a8785d3 Fix some HTML issues with $, < and >
+9a5cfb0 Add mathtools warning
+6663816 Adds pgfplots package
+b888b53 Missing option no-load-tex-package
+5e3829e Extremely primitive imakeidx implementation
+069edcc Remove more useless imports
+7ecd2d5 Remove useless test import
+563c92b Fix If test
+e5ccca9 properly parse \newif inside \if
+cd45162 unittest testUnterminatedIf to see if plastex prints warning on unterminated '`if' currently not working , due to the way plastex manages loggin see in the patch for further info
+bed9f95 warn if an \if clause was not correctly terminated
+d9b90da Stream numbers are 4-bit, i.e. values 0 to 15 «The status of input streams (Chapter 30) can be tested with the end-of-file test \ifeof [number], which is only false if the number is in the range 0–15, and the corresponding stream is open and not fully read.» From "TeX by topic", Sec 13.5.3. So '\ifeof16' will crash pdflatex, making this test quite useless
+55ab4bb when compare_output fails, show the difference
+8464abf Don't try to use ipdb in Jinja2 debug
+62789f3 HTML5: handle empty \ref
+3c17dcb Catch Jinja2 template errors
+7851d80 Expand indexing test so that the TeX works with pdflatex
+64fd038 Fix sorting of index entries
+9cd40c4 Information when loading amsart and amsbook
+b722e5b Add amsbook dummy package
+d048c6f Add de-ngerman (current German orthography) to i18n.xml
+1376dda Document the length equal test in ifthen package
+d27b25a Remove the renderer in ifthen package unit tests
+8a1cd59 Improve ifthen package based on review suggestions
+ff2b17c Implement ifthen package
+cbb24b0 Try to fix mysterious mypy issue
+0b8cf42 Improve xcolor type annotations and unit tests
+124433f Add unit tests for xcolor package
+5ca7d20 Implement xcolor package
+99cc39e Fix package loading again
+2c3fcb1 Fix amsthm fix
+de519aa Fix amsthm counter creation
+3b8e7f2 Fix some mypy errors in tests
+ea53aa2 Add missing command in tikz-cd
+a77ec54 Fix amsthm benchmark
+217dfe0 CSS tweaks
+0860185 Print ?? when a reference is undefined.
+2cbc585 Add missing </div> in main HTML5 layout
+7f3dacf Remove id when testing html output
+7454127 Fix Proof test
+3b86442 Put equation label to the right
+5c6ab9d Improve amsthm handling
+0624200 Tiny style tweaks
+f6f2819 Package loading partial revert.
+5eda583 Remove header in document node without toc
+7d60853 Add qedhere in amsthm
+811deda Layout tweaks
+6b8dabb Tweak icon sizes
+1351072 HTML5 display proofs by default
+208f1dd Change default value for dollars option
+c3d6e07 Change default vectorImager from none to pdf2svg
+1cf1565 Allow to specify image scale for each node type.
+e0a9b68 Forgotten small edits
+4d4dd32 Make HTML5 the default renderer.
+42d5dff Minimal fix to DocBook renderer
+b3f1bb8 Make sure config is loaded in HTML5 Renderer
+33120c0 Simplify README in Doc
+c510ab0 Don't try to copy js if no theme is loaded.
+69237ae Fix js file name bug introduced in 4f1dbedab
+4b60302 Add HTML5 fragment theme, and document themes.
+4f1dbed Allow empty js folder in HTML5 theme
+ca72e3e White default theme for HTML5
+8648fa1 Change test style in CSSStyles
+3d8de4e Python style tweaks
+d6e9156 add some unit tests for inline styles
+29b627d CSSStyles doesn't include properties with empty values
+8645051 Remove traces of Travis
+764440e Use tempfile to name Imager's LaTeX source file
+05e635b Move examplePackage to safer place
+cd4fd41 Remove tests for python 3.5 and add 3.9
+6fd92af More robust package importing
+76c69be Fix \capitalnewtie
+98b2512 Remove unused #! lines and make the rest specify python3
+0b4b6a0 Migrate to GitHub Actions
+fd8d523 Don't load a random python module as package
+79b8a77 Fix bug with accents in absence of content.
+aee501a Remove python2 leftover in doc
+d85adb4 Fix index entries grouping
+bd0f441 Add indexing tests
+e1c6355 Fix nested if
+1d9d19c Don't insert \input command after parsing
+415179e Fix Cleveref when the reference is non-existent
+9369e35 Fix option storage for todonotes
+f31ee2e Packages/listings: use document.userdata
+896dcdd marginnote stub
+bd5f411 Remove legacy ZPT renderer
+ddc99a1 Adapt to new ConfigManager
+7635a34 mypy fixes
+9a25456 Fix plugin defining renderers
+e50bbc6 Order postParseCallbacks
+d6839d3 Allow css and js resources to copy file only
+438fde5 Fix renderdata overwriting bug
+f6ec807 Better error reporting when loading packages
+f7be2e5 Refactor PackageResource
+e9d12a2 Load packages from config and plugins
+e23616a Only load LaTeX implementations of packages if asked
+e0f83df Allow plugins to define renderers
+a667e79 Improve tests and documentation
+beb89c5 Replace ConfigManager
+ccf5b5f Don't read file into memory with \input
+7a85561 Update renderer docs
+a19367d Don't always generate bitmap images
+b332d44 Add compare_output cache
+bc35e45 Convert more things to compare_output
+49336ff Fix \ifnum etc. integer parsing
+e731ea5 Modify some tests to use compare_output
+06d2c67 Remove empty ProcessOptions
+a73d92a Remove non-existent \ifeven command
+edce060 Remove unused logging imports
+09c5959 Fix imager test
+59f0a1b Add forgotten tex file
+40deae0 Stop ConfigFileReading from polluting repository
+a3e259c Add .mypy_cache got gitignore
+8d3437d Fix mypy error from 8c9df7e
+8c9df7e Add partial cleveref implementation
+979c122 Add basic todonotes implementation
+af50b13 Don't use callback in filename
+e0aec5b Fix FunctionalTests source collection
+525a41e Revert "Don't overwrite Config.config"
+a67aa29 Add a config file reading test.
+7bff774 Add mypy to tests
+8b6aae5 Fix or ignore all remaining mypy errors
+a1c53dc Implement __add__ for config options
+64c1a38 Fix name collision in unittest
+38de1b6 Use more modern notation for class methods
+e2207c0 Add more typing annotations
+266f6e0 Add miscellaneous mypy fixes
+c45a3b2 mypy: Fix repeated definition errors
+bdf0c16 Add mypy.ini file
+05db265 Fix all mypy incompatible import errors
+8a42b19 Use more standard way to define properties
+88b2d0f Add some tikz commands that do nothing
+f9733e0 Add option to disable some character substitutions
+0b089e6 Allow redefining unrecognizedmacro
+d42f5f2 Copy xymatrix implementation from gerby.
+5aa8766 Tidy up comments
+3eccc6f Add helper utility to check TeX output against plasTeX
+963c380 expandafter only expands once, not recursively
+f4321c2 Set catcode of macros. Fixes #70. Fixes #11
+44f2e46 Fix \expandafter implementation
+d0f3239 Simplify expandafter definition
+27c8a8f pdf2svg: truncate height/width floats
+ca34bf1 Implemented 'gathered' environment
+a9c1467 Fix counter presentation
+066bc71 Fix all typing issues in Tokenizer
+fcbe65b Removed Token classes that can never be initialized
+8ee3761 Add \number command as well
+b02bdb3 Add \romannumeral command
+77c6983 Add more typing
+8fcbf37 Add some type annotations
+9aa0aec Chapter counter shouldn't reset with new part
+f6a332b Add test for book class toc
+2dd7edc Fix regression caused by fbb79a5. Fixes #192
+3285c0c Make Imager.staticimages a dict
+11cd9cd Let compilation fail when imager fails
+527dfa5 Upon error, let Imager raise exception
+ad4ce25 More robust imager implementation
+63d7a0d let: move relax special casing elsewhere
+9f00978 Make \let less broken
+7c177a8 Factor out image comparison in tests
+ed9671d Fix mathjax url in benchmarks
+539a81a Make proof blocktype.
+47a2e39 Add tests for making Proof blocktype
+b60162a Force theorem environments to make paragraphs.
+769faeb Add test to ensure theorem content is always in a paragraph for consistent styling
+798c60e Remove bs4 dependency
+7bbce77 Update default HTML5 MathJax url
+867b0e6 Packages/color.py: fix incorrect color conversion
+311a6c7 Add custom renderer test
+463ae60 Allow using Renderer given by a path
+14afd01 Use Imager for Tikz (#151)
+770a677 Add pytest artifacts to .gitignore
+e04843d Add missing travis build dependency
+fbb79a5 Fix `Macro.source` for non-letter commands
+faff54b Add unit test for Macro.source for accents
+5fa13f8 Restore cwd after compilation
+76e1051 Fix imager test on python 3.5
+99fc05c Don't overwrite Config.config
+dceccd8 Raise exception instead of exit when renderer not found
+20ec3dc Move compilation logic from cli to library
+3997837 Add empty microtype implementation
+5b69d3a Add mathop
+a5c9750 Add text command into FontSelections.
+5eb6c43 Allow specifying different compilers for Imager and VectorImager
+bc684b4 Move verbatim to VerbatimEnvironment in __init__.py
+66ceed4 Add dvisvgm test
+71f6299 Modernize dvisvgm
+3195dc7 Make dvisvgm respect scale-factor
+cbe8c50 HTML5: Don't crash if working-dir is unspecified
+d40b7fb Add dvipng and pdf2svg imager tests
+354dc9f Fix missing imager name in error messages.
+157d7f9 Update documentation and add some type annotations
+e8436d4 Add some imager documentation
+a8066a4 Write better code in pdf2svg
+94f7c66 Let pdf2svg Imager respect scale factor
+fa2920a Clean up temporary directories after use
+f61b929 Use verifications instead of verification for imagers
+65e0b50 Add pdf2svg imager
+b2053f9 Fix formatting in CONTRIBUTING
+3709280 Document how to run tests.
+c110b8f Remove unused import
+e90a2ad Implement texorpdfstring properly
+97474e9 Add support for textsuperscript and textsubscript
+2d86210 Add missing endif
+5af28b0 Giving up on testing non-breakable space on python3.5
+a8fa44a Try to get some tox reproducibility by setting locales
+fec5594 Use HTML5 for benchmarks
+41868b5 Unicode combining diacritics as accent fallbacks
+a345d45 Order template loading
+a56e56d Try again debugging Travis
+a972955 Try to help debugging on Travis
+6b2e603 Fix benchmarked tests (again).
+2270289 Make sure Encoding test does not mess up locales.
+3fbdeab Better handling of dependencies
+2ff6344 Merge pull request #147 from dalcde/patch-1
+2c820e3 Fix hyperref typos
+40af193 Lint main script
+2b0791b Merge pull request #135 from llimeht/tmp/test-interpreter
+b561804 Merge pull request #136 from llimeht/tmp/test-warnings
+3ee75f4 Prevent ResourceWarning from popen
+c28ee18 Prevent ResourceWarning from open files
+29ded69 Merge pull request #132 from llimeht/tmp/reproducible
+267d242 Add latex packages used by tikz tests
+bd42939 Merge pull request #133 from llimeht/tmp/no-chdir
+d23b89b Fail test if runing plastex failed
+6b7910f Allow setting the plastex command for tests
+c48c4de Use context manager for chdir in tests
+48dd5be Sort index so that output is reproducible
+e93085d Bump travis python versions
+571a64c Bump to 2.1 in code
+3d3e806 Bump to version 2.1
+d7b8582 Add Python 3.8 to tox tests.
+aebf457 Fix functionnal test running
+73e5757 Search current directory if kpsewich is not there
+ea5952e Missing raw string in a tikz test.
+c60d72a Uses subprocess.call instead of os.system
+c8494fb Tikz tests
+6b52d9d Document TikZ support
+7f9621c Add tikz support
+b0d2cd8 getImage: convert file extensions to lower case
+f09f048 Fix #93
+7cc0f77 Make @ letter while loading document class
+d17a553 Fix #34
+89d0f26 Fix #36
+acaa91f Filename templating: add $ref and $node
+f4a7c6b Fix #113
+ed29ebb Better error reporting when imager fails. See #106
+ac7790b Fix #127
+777e017 Fix issue #124
+0be4317 Add test for issue #124
+06f1e71 Remove useless import
+53cc465 Merge pull request #121 from llimeht/tmp/escapes
+c08125e Merge pull request #122 from llimeht/tmp/collections.abc-imports
+a31cfd3 Merge pull request #123 from llimeht/tmp/setup-classes
+d161587 Fix escape sequences in strings
+bbd5de8 Fix collections.abc import
+7cb5379 Add missing classes to setup.py
+ce50636 CSS fix for figures in HTML5
+03734b6 Fix new sass option name in build-css.sh
+d7c3c12 Doc building update
+13e417a Remove outdated script
+0012612 Fix version number
+8ebba0f Make master the default branch
+9513db7 Try again coveralls, sorry about the noise
+ea72fd8 Reverts failed coveralls fix. Update gitignore
+cbb959e Try fixing coveralls paths
+249fdc8 Try fixing coveralls
+366e410 Fix comparisons with None
+348191b [LINT] enable singleton-comparison
+3b05013 Remove unnecessary semicolons
+5d84c2f [LINT] enable unnecessary-semicolon
+22dd213 Don't reimport modules
+b5dca73 [LINT] enable reimported
+7dc8f53 Remove unreachable code
+7a6b340 [LINT] enable unreachable
+6ea3286 Turn string statements into comments
+ae0fefa [LINT] enable pointless-string-statement
+aaad38b Make side-effect calls into an assignment
+6ef4fb0 [LINT] enable pointless-statement
+f086516 Remove unneeded 'pass' statements
+a98fbfc [LINT] enable unnecessary-pass
+30a1ee6 Delete unused imports identified by pylint
+2f882b8 [LINT] enable unused-import
+e0a1bea Remove double negatives from code
+dc29f86 [LINT] enable unneeded-not
+74e4fe9 Simplify conditionals with multiple isinstance calls
+fe960f8 [LINT] enable consider-merging-isinstance
+3bf6d0e Use foo in (bar, baz) for conditionals
+15fa0d5 [LINT] enable consider-using-in
+d12115a Don't use len() in conditionals
+4d8f6a6 [LINT] Enable len-as-condition
+01aacb1 Add a pylintrc to help track code style
+cf7e711 Fix backslashes in strings
+587683f Use collections.abc for Python 3.8 compatibility
+0eacfb9 Bump Jinja2 requirement because of security issue CVE-2019-10906
+5496739 Merge pull request #120 from plastex/fix_tests
+718a10c Update tox.ini to test python 3.5, 3.6, and 3.7
+044bc62 Update local testing instructions
+0834feb Fix import issue in gspdfpng.py
+e307300 Try again tox and travis...
+e05d0f5 Add more python versions to travis
+084d2f4 Launch tox in travis
+bd37445 Split requirements for test and add tox.ini
+9294e5a Activate Longtable tests + factor out helpers
+f573b6c Try again: don't use cli tool in alltt test
+bbe6581 Change temp directory strategy
+d9df3c4 Try to fix Alltt test TEXINPUTS
+ba2c7b2 Try to fix dvi2bitmap and remove dvipng from Travis
+5ad36fe Try adding sudo
+7a994ab Install dvipng
+04fc4cc Adds jinja2 to requirements
+ffba685 Add unidecode to requirements
+23d3389 Try to fix Travis
+e8d2800 Restore all tests by removing harmful unittests/__init__.py
+4ab3a8a Update setup.py
+8a835f3 Update README.md
+ec7d90c updated version, published to pypi
+254f4c2 Update setup.py
+5dc22cd Update README.md
+87a8be9 Enable testing with Python 3.7
+3dbe260 Drop unneeded EndInput handling
+ac3b2c6 updated version, published to pypi
+c2850cf Potential fix for Python 3.7 generators
+95067d7 Merge pull request #105 from dalcde/tiarno/python3
+9cc2cc6 Fix dvisvgm imager
+3e67138 Fix dvi2bitmap as well
+d879217 Fix error in gspdfpng Imager
+fc405f9 Merge pull request #101 from niklasp/python3
+88f61c8 add a section about testing in the readme
+cc913f8 make pytest output a little more verbose for better test reports
+dc44208 some polishing
+bd0b2ec markdown readme
+238ccd7 rename README to README.md and add build and coverage status
+b7e0c40 add coveralls
+b3396ca try to make tests pass on travis
+9fb2e25 correct travis ci name
+5390a2a Merge branch 'python3' of https://github.com/niklasp/plastex into python3
+7b131a6 add travic CI
+10f51da make unittests pass generally

@@ -1,0 +1,11 @@
+diff --git a/plasTeX/Packages/xy.py b/plasTeX/Packages/xy.py
+index a70e1d3..f1347a9 100644
+--- a/plasTeX/Packages/xy.py
++++ b/plasTeX/Packages/xy.py
+@@ -52,3 +52,6 @@ class xymatrixH(xymatrix):
+ 
+ class xymatrixL(xymatrix):
+   macroName = "xymatrix@L"
++
++class xymatrix1(xymatrix):
++  macroName = "xymatrix@1"

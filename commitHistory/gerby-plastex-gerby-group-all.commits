@@ -1,0 +1,153 @@
+e1a7518 Add output for \xspace
+11182c5 Trying an upstream fix
+1054137 Committing changes made over the last years
+82fe293 \paragraph has no complicated output, just <h5>
+d577662 Deal with multiple entries in \cite
+d27ad08 Update README
+b0f07ee Integrating tikz and tikz-cd in Gerby renderer
+b714990 Verbatim copying the TikZ implementation from upstream
+2c34245 Implemented 'gathered' environment
+650be75 Applying upstream Python 3.7 fix
+5c274c9 Sometimes a proof does not have a caption
+abcdd54 Strip HTML for item marker in template
+cd87e57 Remove one character from a re.compile expression
+5503a35 Revert "Parts are by default numbered using Roman"
+a313ccd Undo previous commit
+ebc152d Make sure that <, > are wrapped in spaces in math
+d3b3845 Undoing commit a1ac8e3
+d657a30 Parts are by default numbered using Roman
+0beb15b Use caption, not thmName, for naming thmenv's
+c576c7d Fixes unknown datatype in hyperref implementation
+a1ac8e3 Fixing output of \texorpdfstring
+ebb8c51 Add text command into FontSelections.
+add7b63 No data-tag for tagged items; no tag toggling for items for now.
+592489d Stop Gerby from complaining about bigskip, bibliography, and bibliographystyle.
+a79a99f Template to print out reference, slogan, history things.
+f524566 Template for quote environment.
+8a71752 Template for large command.
+c13e3f1 Some templates for alignments.
+af477ad Allow bfseries, textbf, itseries, textit in font selection.
+dccb21d Implement template for href.
+09d27bb Define skeletal commands for xyoption and UseAllTwocells to stop complaining.
+9c510b6 Fix a woopsie on variable names; also, periods are confusing.
+fe41b6d More robust texorpdfstring template.
+4b36f93 Add dictionary that keeps track of individual arguments.
+d1c5389 Implement texorpdfstring template.
+b781272 textorpdfstring -> texorpdfstring; the former is not a thing.
+762f8d0 Implements #25.
+2bb10f0 Implements #43.
+8f2a8d5 Fixes #48.
+fa3cf47 Fixes #49
+030308c Don't use data-marker on list items with tags
+927609a Adding *.swp to .gitignore
+54ce409 Fixing silly HTML issue in previous commit
+2ecf68e Wrapping postnote of a citation in a <span>
+ea09c79 Remove extra paragraph tags around displaymath divs.
+3722774 No character substitutions in math mode.
+1a21e0c Further things that should not do charSubs.
+b65433a Refactor the character substitution to a flag.
+bcd8d94 Tags for enumerate items.
+e306640 Allow alignment tags inside xymatrix.
+00ebf1b Woops, revert killed too much; just got rid of debugger.
+bb38d1f Revert "reversed is necessary because..."
+7da553e reversed is necessary because...
+6fbdc58 Remove irrelevant TODOs.
+eae2c93 Add meta information into Context; in particular, line count.
+e857e04 Make slogans and history elements also whitespace.
+ac04f9a Remove debugger import.
+6f4be32 Gets rid of mysterious hack from 1e0f757
+bac5e9d Implements optional parameter for cite, #44
+0e224ba Fix spacing and reference issues in thmenv.
+ccf25a7 Merge pull request #42 from chngr/gerby
+6d1b5cf Merge branch 'gerby' of github.com:pbelmans/plastex into gerby
+df5178c New xymatrix variant found in SAG.
+48064c0 Merge pull request #40 from chngr/gerby
+4a36aa1 Merge branch 'gerby' of github.com:pbelmans/plastex into gerby
+bcb2524 No character substitutions in math environments.
+d86619e Merge pull request #39 from chngr/gerby
+3b86b8b Force theorem environments to make paragraphs.
+495d0fb Getting rid of extra whitespace in citations
+a0abec7 Fixes #37
+6572b72 Dealing with references
+73b4b5d Copying bibliography files to output
+17c2601 There are also references in the Stacks project
+c9dfd3e Slogans etc. are associated to parent node
+63047d3 Don't try parts if there are none
+b3fff6a Write parts and chapters to JSON file
+bf4a617 Removing custom invoke on index
+9f67ca3 Chapter counter shouldn't reset with new part
+7268416 Merge branch 'gerby' of github.com:pbelmans/plastex into gerby
+4d1c25b Not just equation should be numbered
+516c25f Merge pull request #33 from chngr/gerby
+35d00d9 Place proof header and QED square inside paragraph elements of a proof.
+dd605b0 Fixes #24 and #26
+4762632 Adding data-tag on sectioning commands
+9f7bb50 Possible fix for #15
+091956b Fixes bad <li> template
+f025bce Don't propagate headings
+3b50b30 Less ambiguous <li> output
+13dc01d Merge branch 'gerby' of github.com:pbelmans/plastex into gerby
+ac0226c Adding data attribute to references
+771dd0a Merge pull request #22 from chngr/gerby
+a24e7c0 Small hack to make plasTeX not put a space after \omit.
+6a8f182 Spacing variants for xypic.
+8f98825 Make sure the EndRow argument for matrix environments leaves initial whitespace.
+a7b3772 Outputting the tree structure for debugging
+14039b9 Merge pull request #19 from chngr/gerby
+8498571 New Command class so arguments have no charsub.
+8672726 Fixes #8
+9cc4ec3 Updated footnote template
+4176b6a Fixes #4
+d735c43 Merge pull request #17 from chngr/gerby
+4dbe830 Implement romannumeral.
+5eed464 Should check that there are footnotes.
+5e6be2d Potential solution for footnotes.
+8ecd79e Removing theme files
+48c87fc Merge branch 'gerby' of github.com:pbelmans/plastex into gerby
+6c5abcb Merge pull request #16 from chngr/gerby
+717ba0e Ability to add custom markers and change default style to match LaTeX.
+a18adda Merge remote-tracking branch 'upstream/python3' into gerby
+27a0f1b Merge pull request #98 from PatrickMassot/debugplastex
+d2eb598 Merge pull request #96 from PatrickMassot/numberwithin3
+4369b70 Python package for debugging purposes
+73bba7a Remove file added by mistake
+5eb432f Test amsmath numberwithin
+63b5e1b Implements numberwithin in amsmath package
+746ef12 Merge remote-tracking branch 'upstream/python3' into gerby
+992df1b Fixes #3
+f06e54e Merge pull request #94 from PatrickMassot/python3
+0cffa47 Fix title bug in newtheorem
+c241f30 Merge pull request #92 from PatrickMassot/python3
+ccb465f Adds missing file plasTeXrc in setup.py
+0f1f235 Fixes #5
+67f98b3 Fixes #2
+1e0f757 Temporarily fixing Jacob's multi-file indexing
+42caca0 Changed theorem template
+a9c66f6 Reordered some lines
+aa226d2 Small output changes
+4b85205 Fixed silly template issue
+3d43dfb Implement history environment
+3a87e34 Handling slogans
+5576ddd Using file extensions for output
+bb3f774 Improved templates
+2c87cf8 Less clutter files by setting split-level option
+103b7f4 Adding slogan environment
+abc268d Make \cite handling more stupid
+5a3ec72 Code cleanup and \ref in proof caption matching
+b169a6f No file extensions for proofs
+b696355 Moved tags to userdata
+7f7fa2b Implemented output propagation
+992f502 Made searchTheorem a static method
+b76327e Partial statement finder for proofs
+947783d Fixed filename generator
+1339535 Implemented the marginnote package
+39c8750 Use plasTeX's output routine to generate files
+de294e9 Started a Gerby configuration file
+639c295 Copying and modifying the bare essentials of HTML5
+7c2afa3 Merge branch 'gerby' of github.com:pbelmans/plastex into gerby
+1c89a29 Merge pull request #1 from PatrickMassot/gerby
+9b06d06 Detects tags at Renderable.__str__ level
+7033c96 Started linking labels and tags in the DOM tree
+9d18e4b Small improvements to HTML output in Gerby
+d26b0c0 Fixing the blockType of theorems and proofs
+aece903 Started implementing the Gerby renderer

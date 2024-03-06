@@ -1,0 +1,12 @@
+diff --git a/plasTeX/Tokenizer.py b/plasTeX/Tokenizer.py
+index e726255..98715eb 100644
+--- a/plasTeX/Tokenizer.py
++++ b/plasTeX/Tokenizer.py
+@@ -285,6 +285,7 @@ class Tokenizer(object):
+ 
+             if token == '\n':
+                 self.lineNumber += 1
++                self.context.meta["lines"] += 1
+ 
+             code = whichCode(token)
+ 

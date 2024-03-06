@@ -1,0 +1,21 @@
+diff --git a/plasTeX/Renderers/Gerby/Config.py b/plasTeX/Renderers/Gerby/Config.py
+new file mode 100644
+index 0000000..df7104a
+--- /dev/null
++++ b/plasTeX/Renderers/Gerby/Config.py
+@@ -0,0 +1,15 @@
++import os
++from plasTeX.ConfigManager import *
++
++config = ConfigManager()
++
++section = config.add_section("gerby")
++
++config.add_category("gerby", "Gerby renderer options")
++
++section["tags"] = StringOption(
++  """Location of the tags file""",
++  options = "--tags",
++  category = "gerby",
++  default = "tags",
++)

@@ -1,0 +1,13 @@
+diff --git a/plasTeX/Renderers/Gerby/Sectioning.jinja2s b/plasTeX/Renderers/Gerby/Sectioning.jinja2s
+index 9ebc507..a135bb3 100644
+--- a/plasTeX/Renderers/Gerby/Sectioning.jinja2s
++++ b/plasTeX/Renderers/Gerby/Sectioning.jinja2s
+@@ -19,7 +19,7 @@ name: subsubsection
+ 
+ 
+ name: paragraph
+-<h5 id="{{ obj.id }}" class="tex-{{ obj.nodeName }}"><span data-tag="{{ obj.userdata['tag'] }}">{{ obj.ref }}</span> {{ obj.title }}</h5>
++<h5>{{ obj.title }}</h5>
+ {{ obj }}
+ 
+ 

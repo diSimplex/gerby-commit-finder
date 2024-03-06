@@ -1,0 +1,21 @@
+diff --git a/plasTeX/Renderers/Gerby/Primitives.jinja2s b/plasTeX/Renderers/Gerby/Primitives.jinja2s
+index 1592db0..740b54f 100644
+--- a/plasTeX/Renderers/Gerby/Primitives.jinja2s
++++ b/plasTeX/Renderers/Gerby/Primitives.jinja2s
+@@ -1,11 +1,13 @@
+-name: par 
++name: par
+ {% if obj.blockType %}
+ {{ obj }}
+ {% else %}
+-<p>{{ obj }}</p>
++<p>
++{{ obj }}
++</p>
+ {% endif %}
+ 
+-name: active::^ 
++name: active::^
+ <sup>{{ obj }}</sup>
+ 
+ name: active::_

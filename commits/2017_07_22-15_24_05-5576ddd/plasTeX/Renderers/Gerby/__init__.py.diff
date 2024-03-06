@@ -1,0 +1,13 @@
+diff --git a/plasTeX/Renderers/Gerby/__init__.py b/plasTeX/Renderers/Gerby/__init__.py
+index 399cbc9..b91ae18 100644
+--- a/plasTeX/Renderers/Gerby/__init__.py
++++ b/plasTeX/Renderers/Gerby/__init__.py
+@@ -41,7 +41,7 @@ class GerbyRenderable(Renderable):
+       if self.nodeName == "thmenv":
+         environment = self.thmName
+ 
+-      return environment + "-" + self.ref + "-" + self.userdata["tag"] + "-" + self.id
++      return environment + "-" + self.ref + "-" + self.userdata["tag"] + "-" + self.id + ".tag"
+ 
+     # handle proofs
+     if self.nodeName == "proof":

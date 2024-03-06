@@ -1,0 +1,65 @@
+#!/usr/bin/env python
+
+import os
+import subprocess
+import sys
+import yaml
+
+origPlastexDir = '../external/plastex'
+testPlastexDir  = '~/tmp/gerby-plastex'
+testPlastexDirA  = '~/tmp/gerby-plastex/a'
+testPlastexDirB  = '~/tmp/gerby-plastex/b'
+filesDir = 'filesChanged'
+
+def applyPatch(aPatchDiff) :
+  print(f"\n\033[38:5:8m  applying: {aPatchDiff}\033[38:5:0m")
+  aPatchDiffPath = os.path.abspath(aPatchDiff)
+  procResult = subprocess.run(
+    f"cat {aPatchDiffPath} | patch -p1 --forward",
+    stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+    shell=True, text=True, cwd=testPlastexDirB
+  )
+  resultStr = procResult.stdout
+  resultStr = "\n    ".join(resultStr.splitlines())
+  print("\033[38:5:8m  "+resultStr+"\033[38:5:0m")
+
+patchUps = {}
+try :
+  with open('patchUps.yaml') as yF :
+    patchUps = yaml.safe_load(yF.read())
+except Exception as err :
+  print("Could not load the patchUps YAML")
+  print(repr(err))
+  sys.exit(1)
+
+#print(yaml.dump(patchUps))
+#sys.exit(0)
+
+os.system(f"rm -rf {testPlastexDir}")
+os.system(f"mkdir -p {testPlastexDirA}")
+os.system(f"mkdir -p {testPlastexDirB}")
+os.system(f"cp -R {origPlastexDir}/* {testPlastexDirA}")
+os.system(f"cp -R {origPlastexDir}/* {testPlastexDirB}")
+
+baseDir = os.getcwd()
+for aDirPath, dirs, files in os.walk(filesDir) :
+
+  # Alter the next three lines to select different collections of patches
+  #if '/Packages/'  in aDirPath : continue
+  #if '/Renderers/' not in aDirPath : continue
+  if '/Renderers/Gerby' in aDirPath : continue
+  # The above control which collection of patches we will look at
+
+  if 0 < len(files) :
+    print(f"\n\033[38:5:0mWorking in {aDirPath}\033[38:5:0m")
+    if aDirPath in patchUps and 'patch' in patchUps[aDirPath] :
+      aPatchDiff = patchUps[aDirPath]['patch']
+      applyPatch(aPatchDiff)
+      continue
+    if aDirPath in patchUps and 'patchOK' not in patchUps[aDirPath] :
+      print("\033[38:5:8m  Ignoring patches\033[38:5:0m")
+      continue
+    for aPatchDiff in sorted(files) :
+      if not aPatchDiff.endswith('diff') : continue
+      aPatchDiff = os.path.join(aDirPath, aPatchDiff)
+      applyPatch(aPatchDiff)

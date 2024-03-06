@@ -1,0 +1,11 @@
+--- a/plasTeX/DOM/__init__.py
++++ b/plasTeX/DOM/__init__.py
+@@ -1071,6 +1071,8 @@
+
+         """
+         charsubs = charsubs or []
++        if not getattr(self, "doCharSubs", True) or self.ownerDocument.context.isMathMode:
++            charsubs = []
+
+         if self.hasAttributes():
+             for key, value in self.attributes.items():

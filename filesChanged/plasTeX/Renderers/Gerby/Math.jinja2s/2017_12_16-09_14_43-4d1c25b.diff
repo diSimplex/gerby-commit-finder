@@ -1,0 +1,20 @@
+diff --git a/plasTeX/Renderers/Gerby/Math.jinja2s b/plasTeX/Renderers/Gerby/Math.jinja2s
+index 8a2d34f..10b1995 100644
+--- a/plasTeX/Renderers/Gerby/Math.jinja2s
++++ b/plasTeX/Renderers/Gerby/Math.jinja2s
+@@ -1,13 +1,13 @@
+ name: math DeclareMathOperator
+ {{ obj.source }}
+ 
+-name: ensuremath eqnarray eqnarray* align align* gather gather* flalign flalign* \
++name: ensuremath eqnarray* align* gather* flalign flalign* \
+       multline multline* alignat alignat* split displaymath equation*
+ <div class="equation">
+   {{ obj.source }}
+ </div>
+ 
+-name: equation
++name: equation eqnarray align gather
+ <div class="equation" {% if obj.userdata['tag'] %}id="{{ obj.userdata['tag'] }}"{% endif %}>
+   {% if obj.userdata['tag'] %}
+     <span class="equation-label"><a href="/tag/{{ obj.userdata['tag'] }}" data-tag="{{ obj.userdata['tag'] }}">{{ obj.ref }}</a></span>
