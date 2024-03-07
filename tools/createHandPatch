@@ -9,6 +9,7 @@ import subprocess
 import sys
 
 testPlastexDir  = '~/tmp/gerby-plastex'
+testPlastexDir  = os.path.expanduser(testPlastexDir)
 
 if len(sys.argv) < 2 :
   print("usage: createHandPatch <<filePathToPatch>>")

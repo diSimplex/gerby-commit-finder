@@ -44,6 +44,8 @@ os.system(f"mkdir -p {testPlastexDirB}")
 os.system(f"cp -R {origPlastexDir}/* {testPlastexDirA}")
 os.system(f"cp -R {origPlastexDir}/* {testPlastexDirB}")
 
+# Start by walking through the known file changes in the `filesChanged`
+# directory
 baseDir = os.getcwd()
 for aDirPath, dirs, files in os.walk(filesDir) :
 
@@ -58,11 +60,23 @@ for aDirPath, dirs, files in os.walk(filesDir) :
     if aDirPath in patchUps and 'patch' in patchUps[aDirPath] :
       aPatchDiff = patchUps[aDirPath]['patch']
       applyPatch(aPatchDiff)
+      del patchUps[aDirPath]
       continue
     if aDirPath in patchUps and 'patchOK' not in patchUps[aDirPath] :
       print("\033[38:5:8m  Ignoring patches\033[38:5:0m")
+      del patchUps[aDirPath]
       continue
+    if aDirPath in patchUps :
+      del patchUps[aDirPath]
     for aPatchDiff in sorted(files) :
       if not aPatchDiff.endswith('diff') : continue
       aPatchDiff = os.path.join(aDirPath, aPatchDiff)
       applyPatch(aPatchDiff)
+
+# Now add in any "fake" changes that have been added manually to the
+# patchUps database.
+for aKey, aValue in patchUps.items() :
+  if 'patch' in aValue :
+    print(f"\n\033[38:5:0mWorking in {aKey}\033[38:5:0m")
+    aPatchDiff = patchUps[aKey]['patch']
+    applyPatch(aPatchDiff)

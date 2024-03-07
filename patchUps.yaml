@@ -25,6 +25,7 @@ filesChanged/plasTeX/DOM/__init__.py:
   details: |
     Patch needs to be applied by hand
     Gerby-PlasTeX and PlasTeX have diverged
+    Solves pytestFailures/solutions/ownerDocument.context.md
   patch: handPatches/plasTeX/DOM/__init__.py.diff
 
 filesChanged/plasTeX/Base/TeX/Macros.py:
@@ -59,6 +60,13 @@ filesChanged/plasTeX/Base/LaTeX/Arrays.py:
     1 out of 3 hunks FAILED -- saving rejects to file plasTeX/Base/LaTeX/Arrays.py.rej
   patch: handPatches/plasTeX/Base/LaTeX/Arrays.py.diff
 
+filesChanged/unittests/benchmarks/align.html:
+  details: |
+    2017_09_29-22_19_23-8f98825 adds extra space characters into the
+    LaTeX->HTML rendering of the `unittests/sources/align.tex`
+    As discussed in pytestFailures/solutions/alignBenchmarkFailures.md
+  patch: handPatches/unittests/benchmarks/align.html.diff
+
 filesChanged/plasTeX/Base/LaTeX/Accents.py:
   details: |
     Patch (hunk#1) needs to be applied by hand
@@ -68,6 +76,14 @@ filesChanged/plasTeX/Base/LaTeX/Accents.py:
     Hunk #1 FAILED at 21.
     1 out of 1 hunk FAILED -- saving rejects to file plasTeX/Base/LaTeX/Accents.py.rej
   patch: handPatches/plasTeX/Base/LaTeX/Accents.py.diff
+
+filesChanged/unittests/accents.py:
+  details: |
+    Fix the existing accent pytest to match
+      handPatches/plasTeX/Base/LaTeX/Accents.py.diff
+    As discussed in pytestFailures/solutions/changesToAccentHandling.md
+    And corrected in pytestFailures/solutions/accentsStrNotCallable.md
+  patch: handPatches/unittests/accents.py.diff
 
 filesChanged/plasTeX/Base/LaTeX/Definitions.py:
   details: |
@@ -86,7 +102,9 @@ filesChanged/plasTeX/Base/LaTeX/Index.py:
     HOWEVER the effect of these patches is to comment out the textContent
     invoke function
     IS THIS REALLY NEEDED/WANTED?
-  patch: handPatches/plasTeX/Base/LaTeX/Index.py.diff
+    We ignore this patch as a solution to
+      pytestFailures/solutions/removingInvokeInLatexIndex.md
+  #patch: handPatches/plasTeX/Base/LaTeX/Index.py.diff
 
 filesChanged/plasTeX/Base/LaTeX/Math.py:
   details: |
@@ -97,12 +115,16 @@ filesChanged/plasTeX/Base/LaTeX/Math.py:
 filesChanged/plasTeX/TeX.py:
   details: |
     Added EndInput but other changes already done by PlasTeX
-  patch: handPatches/plasTeX/TeX.py.diff
+    To solve the EndInput pytest failures we have decided to ignore
+      commit `2019_10_19-10_45_23-650be75`
+  #patch: handPatches/plasTeX/TeX.py.diff
 
 filesChanged/plasTeX/Tokenizer.py:
   details: |
     Added EndInput (exception) as well as adding context.meta["lines"]
-  patch: handPatches/plasTeX/Tokenizer.py.diff
+    Solves pytestFailures/solutions/endInput.md by ignoring
+      commit `2019_10_19-10_45_23-650be75`
+  #patch: handPatches/plasTeX/Tokenizer.py.diff
 
 filesChanged/plasTeX/__init__.py:
   details: |
