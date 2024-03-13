@@ -5,20 +5,24 @@ filesChanged/.gitignore:
   details: |
     Patch SHOULD NOT BE APPLIED
     This file should not be modified by Gerby
+  ignore: true
 
 filesChanged/README:
   details: |
     Patch SHOULD NOT BE APPLIED
     This file should not be modified by Gerby
+  ignore: true
 
 filesChanged/setup.py:
   details: |
     Patch SHOULD NOT BE APPLIED
     This file should not be modified by Gerby
+  ignore: true
 
 filesChanged/plasTeX/Context.py:
   details: |
     Patch succeeds
+    Implements `2018_02_15-10_38_15-eae2c93`
   patchOK:
 
 filesChanged/plasTeX/DOM/__init__.py:
@@ -26,18 +30,32 @@ filesChanged/plasTeX/DOM/__init__.py:
     Patch needs to be applied by hand
     Gerby-PlasTeX and PlasTeX have diverged
     Solves pytestFailures/solutions/ownerDocument.context.md
+    Implements `2018_02_20-23_19_31-3722774`
   patch: handPatches/plasTeX/DOM/__init__.py.diff
 
 filesChanged/plasTeX/Base/TeX/Macros.py:
   details: |
     Patch succeeds
-  patchOK:
+    Implements `2017_08_19-19_11_59-4dbe830`
+    and `2017_08_20-09_54_57-d735c43.diff.duplicate`
+    This patch has essentailly already been implemented by PlasTeX
+      in plasTeX/__init__.py numToRoman and
+      in plasTeX/Base/TeX/Numbers.py
+      the only difference is the resulting case of the roman numerals
+  ignore: true
 
 filesChanged/plasTeX/Base/TeX/__init__.py:
   details: |
     Patch needs to be applied by hand
     Gerby-PlasTeX and PlasTeX have diverged
-  patch: handPatches/plasTeX/Base/TeX/__init__.py.diff
+    Implements `2017_08_19-19_11_59-4dbe830`
+    and `2017_08_20-09_54_57-d735c43.diff.duplicate`
+    This patch has essentailly already been implemented by PlasTeX
+      in plasTeX/__init__.py numToRoman and
+      in plasTeX/Base/TeX/Numbers.py
+      the only difference is the resulting case of the roman numerals
+  #patch: handPatches/plasTeX/Base/TeX/__init__.py.diff
+  ignore: true
 
 filesChanged/plasTeX/Base/LaTeX/Verbatim.py:
   details: |
@@ -47,6 +65,10 @@ filesChanged/plasTeX/Base/LaTeX/Verbatim.py:
     The Gerby-PlasTeX's patch's intent was to turn off CharSub.
     This is what PlasTeX has done.
     This NEEDS TESTING
+    Implements `2018_02_11-18_32_48-bcb2524`
+    and `2018_02_20-15_33_38-b65433a`
+    and `2018_02_12-06_22_28-48064c0.diff.duplicate`
+  ignore: true
 
 filesChanged/plasTeX/Base/LaTeX/Arrays.py:
   details: |
@@ -58,6 +80,9 @@ filesChanged/plasTeX/Base/LaTeX/Arrays.py:
     Hunk #2 succeeded at 35 (offset -1 lines).
     Hunk #3 FAILED at 92.
     1 out of 3 hunks FAILED -- saving rejects to file plasTeX/Base/LaTeX/Arrays.py.rej
+    Implements `2017_09_29-22_19_23-8f98825`
+    and `2017_10_01-09_58_34-771dd0a.diff.duplicate`
+    and `2017_10_08-08_32_08-13dc01d.diff.duplicate`
   patch: handPatches/plasTeX/Base/LaTeX/Arrays.py.diff
 
 filesChanged/unittests/benchmarks/align.html:
@@ -65,6 +90,7 @@ filesChanged/unittests/benchmarks/align.html:
     2017_09_29-22_19_23-8f98825 adds extra space characters into the
     LaTeX->HTML rendering of the `unittests/sources/align.tex`
     As discussed in pytestFailures/solutions/alignBenchmarkFailures.md
+    Implements testing for `2017_09_29-22_19_23-8f98825`
   patch: handPatches/unittests/benchmarks/align.html.diff
 
 filesChanged/plasTeX/Base/LaTeX/Accents.py:
@@ -75,6 +101,7 @@ filesChanged/plasTeX/Base/LaTeX/Accents.py:
     patching file plasTeX/Base/LaTeX/Accents.py
     Hunk #1 FAILED at 21.
     1 out of 1 hunk FAILED -- saving rejects to file plasTeX/Base/LaTeX/Accents.py.rej
+    Implements `2017_08_20-10_39_10-4176b6a`
   patch: handPatches/plasTeX/Base/LaTeX/Accents.py.diff
 
 filesChanged/unittests/accents.py:
@@ -83,17 +110,26 @@ filesChanged/unittests/accents.py:
       handPatches/plasTeX/Base/LaTeX/Accents.py.diff
     As discussed in pytestFailures/solutions/changesToAccentHandling.md
     And corrected in pytestFailures/solutions/accentsStrNotCallable.md
+    Implements testing for `2017_08_20-10_39_10-4176b6a`
   patch: handPatches/unittests/accents.py.diff
 
 filesChanged/plasTeX/Base/LaTeX/Definitions.py:
   details: |
     Patches essentially already applied in PlasTeX
     Gerby-PlasTeX and PlasTeX have diverged
+    Implements `2017_07_18-20_07_58-d26b0c0`
+    and `2018_02_11-18_03_07-3b86b8b`
+    and `2017_08_11-14_57_00-746ef12`
+    and `2018_02_11-18_22_24-d86619e.diff.duplicate`
+  ignore: true
 
 filesChanged/plasTeX/Base/LaTeX/Quotations.py:
   details: |
     Patches changed text which did not need to be changed.
     IS this patch needed?
+    Implements `2017_07_22-15_21_57-103b7f4`
+    and `2018_01_06-16_02_15-6572b72`
+    and `2017_07_22-15_29_29-3d43dfb`
   patch: handPatches/plasTeX/Base/LaTeX/Quotations.py.diff
 
 filesChanged/plasTeX/Base/LaTeX/Index.py:
@@ -104,12 +140,23 @@ filesChanged/plasTeX/Base/LaTeX/Index.py:
     IS THIS REALLY NEEDED/WANTED?
     We ignore this patch as a solution to
       pytestFailures/solutions/removingInvokeInLatexIndex.md
+    Implements `2017_08_02-19_42_14-1e0f757`
+    and `2018_02_14-18_54_40-6f4be32`
+    and `2018_01_03-17_20_05-bf4a617`
+    and `2018_02_14-18_58_39-ac04f9a`
+  ignore: true
   #patch: handPatches/plasTeX/Base/LaTeX/Index.py.diff
 
 filesChanged/plasTeX/Base/LaTeX/Math.py:
   details: |
     Most of these patches turn off charsubs.
     The most recent PlasTeX uses the NoCharSubsEnvironment instead
+    Implements `2017_08_08-16_58_36-0f1f235`
+    and `2018_02_20-15_33_38-b65433a`
+    and `2018_02_11-18_32_48-bcb2524`
+    and `2018_02_20-23_19_08-1a21e0c`
+    and `2018_02_12-06_22_28-48064c0` (duplicate)
+    and `2018_05_18-09_26_18-ebb8c51`
   patch: handPatches/plasTeX/Base/LaTeX/Math.py.diff
 
 filesChanged/plasTeX/TeX.py:
@@ -117,6 +164,8 @@ filesChanged/plasTeX/TeX.py:
     Added EndInput but other changes already done by PlasTeX
     To solve the EndInput pytest failures we have decided to ignore
       commit `2019_10_19-10_45_23-650be75`
+    Implements `2019_10_19-10_45_23-650be75`
+  ignore: true
   #patch: handPatches/plasTeX/TeX.py.diff
 
 filesChanged/plasTeX/Tokenizer.py:
@@ -124,16 +173,34 @@ filesChanged/plasTeX/Tokenizer.py:
     Added EndInput (exception) as well as adding context.meta["lines"]
     Solves pytestFailures/solutions/endInput.md by ignoring
       commit `2019_10_19-10_45_23-650be75`
+    Implements `2018_02_15-10_38_15-eae2c93`
+    and `2019_10_19-10_45_23-650be75`
+  ignore: true
   #patch: handPatches/plasTeX/Tokenizer.py.diff
 
 filesChanged/plasTeX/__init__.py:
   details: |
     Added NoCharSubCommand (to mirror the NoCharSubEnvironment)
     Added modifier command to (locally) turn off charSub
-    PlasTeX has radically changed code the "TheCounter::Invoke" (line 1684) see 2017_10_08-09_20_16-9f7bb50
+    PlasTeX has radically changed code the "TheCounter::Invoke" (line 1684)
+      see 2017_10_08-09_20_16-9f7bb50
     Check 2018_02_05-14_36_49-a0abec7
-    For some reason NoCharSubEnvironment has been duplicated at lines 950 and 1042
+    For some reason NoCharSubEnvironment has been
+      duplicated at lines 950 and 1042
     2018_02_20-15_33_38-b65433a.diff unwound the duplicates
+    Implements `2017_09_10-00_17_40-8498571`
+    and `2017_09_10-06_52_46-14039b9` (duplicate)
+    and `2017_09_29-22_19_23-8f98825`
+    and `2017_10_01-09_58_34-771dd0a` (duplicate)
+    and `2017_10_08-08_32_08-13dc01d` (duplicate)
+    and `2017_10_08-09_20_16-9f7bb50`
+    and `2018_02_05-14_36_49-a0abec7`
+    and `2018_02_11-18_32_48-bcb2524`
+    and `2018_02_12-06_22_28-48064c0` (duplicate)
+    and `2018_02_20-15_33_38-b65433a`
+    and `2018_02_20-23_19_31-3722774`
+    and `2018_05_05-11_05_47-4b36f93`
+    and `2019_12_21-14_25_46-b0f07ee`
   patch: handPatches/plasTeX/__init__.py.diff
 
 filesChanged/plasTeX/plastex:
@@ -145,12 +212,17 @@ filesChanged/plasTeX/plastex:
       so we have ignored this patch
     2018_05_05-16_02_43-9c510b6 makes a very minor change to the log info
       so we have ignored this patch
+    Implements `2018_05_05-01_04_54-2bb10f0`
+    and `2018_05_05-16_02_43-9c510b6`
+  ignore: true
 
 filesChanged/plasTeX/ConfigManager/Generic.py:
   details: |
     PlasTeX has removed the ConfigManager/Generic.py
     This has been replaced by a ConfigManager.py
     There is NO use of the collections.Callable
+    Implements `2023_10_09-16_45_53-1054137`
+  ignore: true
 
 ##########################################################################
 # changes to the "base" Packages
@@ -248,6 +320,10 @@ filesChanged/plasTeX/Renderers/HTML5/Lists.jinja2s:
       is this needed here?
     2023_10_09-16_45_53-1054137 reverses 2017_07_18-20_08_55-9d18e4b
 
+filesChanged/plasTeX/Renderers/HTML5/Misc.jinja2s:
+  details: |
+    2017_07_18-20_08_55-9d18e4b.diff
+
 filesChanged/plasTeX/Renderers/HTML5/tikzcd.jinja2:
   details: |
     2019_12_21-11_45_20-b714990 already implemented (differently) in PlasTeX
@@ -256,4 +332,5 @@ filesChanged/plasTeX/Renderers/__init__.py:
   details: |
     2017_07_20-09_23_32-7f7fa2b is a REQUIRED change for Gerby
       can this be done in a plugin?
+    Implements `2017_07_20-09_23_32-7f7fa2b`
   patchOK:
