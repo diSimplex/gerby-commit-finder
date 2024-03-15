@@ -258,6 +258,8 @@ filesChanged/plasTeX/Packages/amsmath.py:
 
 filesChanged/plasTeX/Packages/tikz-cd.py:
   details: |
+    2019_12_21-11_45_20-b714990
+    2019_12_21-14_25_46-b0f07ee
     PlasTeX and Gerby-PlasTeX have a very different implementation.
     At the moment we will favour PlasTeX's implementation....
 
@@ -271,6 +273,8 @@ filesChanged/plasTeX/Packages/marginnote.py:
 
 filesChanged/plasTeX/Packages/tikz.py:
   details: |
+    2019_12_21-11_45_20-b714990
+    2019_12_21-14_25_46-b0f07ee
     PlasTeX and Gerby-PlasTeX have a very different implementation.
     At the moment we will favour PlasTeX's implementation....
 
